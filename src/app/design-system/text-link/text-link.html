@@ -1,0 +1,19 @@
+
+<a
+    class="text-link"
+    [attr.href]="disabled() ? null : href()"
+    [attr.aria-disabled]="disabled() || null"
+    [attr.tabindex]="disabled() ? -1 : null"
+>
+    <span class="text-link__label">
+        <ng-content></ng-content>
+    </span>
+    <lucide-icon
+        class="text-link__icon"
+        [img]="arrowApRightIcon"
+        [size]="14"
+        [strokeWidth]="2"
+        aria-hidden="true"
+    ></lucide-icon>
+    
+</a>

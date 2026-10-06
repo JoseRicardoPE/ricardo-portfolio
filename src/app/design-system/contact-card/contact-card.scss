@@ -1,0 +1,55 @@
+@use '../../../styles/abstracts' as ds;
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: ds.$space-4;
+    width: ds.calculateRem(280px);
+    min-height: ds.calculateRem(214px);
+    padding: ds.$space-8;
+    background-color: var(--color-background-primary);
+    border: ds.$border-1 solid var(--color-border-default);
+    border-radius: ds.$radius-lg;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    overflow: hidden;
+}
+
+.contact-card__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: ds.$space-13;
+    height: ds.$space-13;
+    color: var(--color-icon-primary);
+}
+
+.contact-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: ds.$space-1;
+}
+
+.contact-card__title {
+    @include ds.typography(
+        ds.$font-family-body,
+        ds.$font-size-lg,
+        ds.$font-weight-semibold,
+    );
+    margin: 0;
+    color: var(--color-text-primary);
+}
+
+.contact-card__description {
+    @include ds.typography(
+        ds.$font-family-body,
+        ds.$font-size-sm,
+        ds.$font-weight-regular,
+        ds.$line-height-relaxed
+    );
+    margin: 0;
+    color: var(--color-text-secondary);
+}

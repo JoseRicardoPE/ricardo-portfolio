@@ -1,0 +1,171 @@
+@use 'functions' as f;
+
+// ========================================
+// Typography
+// ========================================
+
+// Font Families
+$font-family-display: 'Syne', sans-serif;
+$font-family-body: 'Inter', sans-serif;
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Font Sizes
+$font-size-xs: f.calculateRem(12px);
+$font-size-sm: f.calculateRem(14px);
+$font-size-md: f.calculateRem(16px);
+$font-size-lg: f.calculateRem(18px);
+$font-size-xl: f.calculateRem(20px);
+$font-size-2xl: f.calculateRem(24px);
+$font-size-3xl: f.calculateRem(32px);
+$font-size-4xl: f.calculateRem(36px);
+$font-size-5xl: f.calculateRem(40px);
+$font-size-6xl: f.calculateRem(48px);
+$font-size-7xl: f.calculateRem(64px);
+
+// Line Heights
+$line-height-default: 1.323;
+$line-height-relaxed: 1.5;
+
+// ========================================
+// Spacing
+// ========================================
+
+$space-0: 0;
+$space-1: f.calculateRem(4px);
+$space-2: f.calculateRem(8px);
+$space-3: f.calculateRem(12px);
+$space-4: f.calculateRem(16px);
+$space-6: f.calculateRem(24px);
+$space-8: f.calculateRem(32px);
+$space-10: f.calculateRem(40px);
+$space-12: f.calculateRem(48px);
+$space-13: f.calculateRem(52px);
+$space-16: f.calculateRem(64px);
+$space-20: f.calculateRem(80px);
+$space-24: f.calculateRem(96px);
+$space-30: f.calculateRem(120px);
+$space-32: f.calculateRem(128px);
+
+// ========================================
+// Tag Component sizes
+// ========================================
+
+$tag-height-sm: f.calculateRem(33px);
+$tag-height-md: f.calculateRem(35px);
+
+// ========================================
+// Grid & Layout
+// ========================================
+
+// Mobile
+$grid-columns-mobile: 4;
+$grid-margin-mobile: $space-6;
+$grid-gutter-mobile: $space-4;
+
+// Tablet
+$grid-columns-tablet: 8;
+$grid-margin-tablet: $space-8;
+$grid-gutter-tablet: $space-6;
+
+// Desktop
+$grid-columns-desktop: 12;
+$grid-margin-desktop: $space-16;
+$grid-gutter-desktop: $space-6;
+
+// Large Desktop
+$grid-columns-large-desktop: 12;
+$grid-margin-large-desktop: $space-30;
+$grid-gutter-large-desktop: $space-6;
+
+// Container
+$container-max-width: f.calculateRem(1200px);
+
+// ========================================
+// Borders
+// ========================================
+// Keep visual strokes in px to preserve consistent thickness
+// regardless of the root font size.
+
+$border-0: 0;
+$border-1: 1px;
+$border-2: 2px;
+
+// ========================================
+// Border Radius
+// ========================================
+
+$radius-none: 0;
+$radius-sm: f.calculateRem(4px);
+$radius-md: f.calculateRem(8px);
+$radius-lg: f.calculateRem(12px);
+$radius-xl: f.calculateRem(16px);
+$radius-2xl: f.calculateRem(24px);
+$radius-full: f.calculateRem(9999px);
+
+// ========================================
+// Shadows
+// ========================================
+
+$shadow-sm-x: 0;
+$shadow-sm-y: f.calculateRem(2px);
+$shadow-sm-blur: f.calculateRem(8px);
+$shadow-sm-spread: 0;
+
+$shadow-md-x: 0;
+$shadow-md-y: f.calculateRem(8px);
+$shadow-md-blur: f.calculateRem(24px);
+$shadow-md-spread: 0;
+
+$shadow-lg-x: 0;
+$shadow-lg-y: f.calculateRem(16px);
+$shadow-lg-blur: f.calculateRem(40px);
+$shadow-lg-spread: 0;
+
+// ========================================
+// Iconography
+// ========================================
+
+// Icon Sizes
+$icon-size-xs: f.calculateRem(14px);
+$icon-size-sm: f.calculateRem(16px);
+$icon-size-md: f.calculateRem(18px);
+$icon-size-lg: f.calculateRem(20px);
+$icon-size-xl: f.calculateRem(32px);
+$icon-size-2xl: f.calculateRem(48px);
+
+// Icon Stroke
+// Keep stroke width in px to preserve consistent visual weight
+// across all icon sizes.
+$icon-stroke-width: 2px;
+
+// ========================================
+// Motion
+// ========================================
+
+// Duration
+$motion-fast: 150ms;
+$motion-base: 250ms;
+$motion-slow: 400ms;
+
+// Easing
+$ease-standard: cubic-bezier(0.2, 0, 0, 1);
+$ease-enter: cubic-bezier(0, 0, 0.2, 1);
+$ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
+// ========================================
+// Accessibility
+// ========================================
+
+// Focus
+$focus-width: f.calculateRem(2px);
+$focus-offset: f.calculateRem(2px);
+
+// Touch targets
+$touch-target-min: f.calculateRem(44px);
+$touch-target-preferred: f.calculateRem(48px);
+$touch-target-spacing: f.calculateRem(8px);

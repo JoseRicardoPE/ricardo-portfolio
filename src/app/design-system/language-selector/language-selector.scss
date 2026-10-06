@@ -1,0 +1,34 @@
+@use '../../../styles/abstracts' as ds;
+
+.language-selector {
+    display: inline-flex;
+    align-items: center;
+    gap: ds.$space-1;
+}
+
+.language-selector__option {
+    @include ds.focus-visible();
+    @include ds.typography(ds.$font-family-body,
+        ds.$font-size-md,
+        ds.$font-weight-bold );
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition:
+        color ds.$motion-fast ds.$ease-standard,
+        background-color ds.$motion-fast ds.$ease-standard;
+
+    &:hover {
+        color: var(--color-interactive-primary);
+    }
+
+    &:focus-visible {
+        border-radius: ds.$radius-sm;
+    }
+
+    &--active {
+        color: var(--color-interactive-primary);
+    }
+}

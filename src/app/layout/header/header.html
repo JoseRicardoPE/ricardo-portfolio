@@ -1,0 +1,113 @@
+<header class="header">
+    <div 
+        class="header__top"
+    >
+        <a 
+            class="header__brand"
+            router-link="/"
+            aria-label="Ir al inicio"
+            (click)="closeMenu()"
+        >
+            <img
+                class="header__logo"
+                src="images/isotipoPortfolio.png" 
+                alt="isotipo Portfolio Ricardo"
+            >
+        </a>
+
+        <!-- Desktop -->
+         <div class="header__desktop-content">
+            <nav
+                class="header__desktop-navigation"
+                aria-label="Navegación principal"
+            >
+                <app-nav-item
+                    label="Home"
+                    route="/"
+                ></app-nav-item>
+                <app-nav-item
+                    label="About"
+                    route="/about"
+                >
+                </app-nav-item>
+                <app-nav-item
+                    label="Projects"
+                    route="/projects"
+                >
+                </app-nav-item>
+                <app-nav-item
+                    label="Contact"
+                    route="/contact"
+                >
+                </app-nav-item>
+            </nav>
+            <div class="header__desktop-actions">
+                <app-language-selector></app-language-selector>
+                <app-theme-toggle></app-theme-toggle>
+            </div>
+         </div>
+
+        <!-- Mobile -->
+        <button 
+            class="header__menu-button"
+            type="button"
+            [attr.aria-expanded]="isMenuOpen()"
+            aria-controls="mobile-menu"
+            [attr.aria-label]="isMenuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+            (click)="toggleMenu()"
+        >
+            @if (isMenuOpen()) {
+                <app-icon
+                    name="close"
+                    size="lg"
+                >
+                </app-icon>
+            } @else {
+                <app-icon
+                    name="open"
+                    size="lg"
+                >
+                </app-icon>
+            }
+        </button>
+    </div>
+    @if (isMenuOpen()) {
+        <div
+            class="header__mobile-menu"
+            id="mobile-menu"
+        >
+            <nav
+                class="header__mobile-navigation"
+                aria-label="Navegación principal"
+                (click)="closeMenu()"
+            >
+                <app-nav-item
+                    label="Home"
+                    route="/"
+                >
+                </app-nav-item>
+                <app-nav-item
+                    label="About"
+                    route="/about"
+                >
+                </app-nav-item>
+                <app-nav-item
+                    label="Projects"
+                    route="/projects"
+                >
+                </app-nav-item>
+                <app-nav-item
+                    label="Contact"
+                    route="/contact"
+                >
+                </app-nav-item>
+            </nav>
+            <div class="header__mobile-actions">
+                <app-language-selector
+                    (languageChange)="language.set($event)"
+                ></app-language-selector>
+                <app-theme-toggle></app-theme-toggle>
+            </div>
+        </div>
+    }
+</header>

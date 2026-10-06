@@ -1,0 +1,18 @@
+<button
+    class="theme-toggle"
+    type="button"
+    [attr.aria-label]="theme() === 'light' ? 'Activar tema oscuro' : 'Activar tema claro'"
+    (click)="toggleTheme()"
+>
+    @if (theme() === 'light') {
+        <app-icon
+            name="moon"
+            size="lg"
+        ></app-icon>
+    } @else {
+        <app-icon
+            name="sun"
+            size="lg"
+        ></app-icon>
+    }
+</button>

@@ -1,0 +1,36 @@
+<div 
+    class="textarea"
+    [class.textarea--error]="error()"    
+>
+    <label
+        class="textarea__label"
+        [for]="inputId()"
+    >
+        {{ label() }}
+    </label>
+
+    <textarea
+        class="textarea__field"
+        [id]="inputId()"
+        [placeholder]="placeholder()"
+        [attr.maxlength]="maxLength()"
+        [attr.aria-invalid]="error() ? 'true' : null"
+        [attr.aria-describedby]="helper() || error() ? inputId() + '-textarea' : null"
+    ></textarea>
+
+    @if (error()) {
+        <span
+            class="textarea__error"
+            [id]="inputId() + '-textarea'"
+        >
+            {{ error() }}
+        </span>
+    } @else if (helper()) {
+        <span
+            class="textarea__helper"
+            [id]="inputId() + '-textarea'"
+        >
+            {{ helper() }}
+        </span>
+    }
+</div>

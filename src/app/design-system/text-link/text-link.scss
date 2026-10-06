@@ -1,0 +1,34 @@
+@use '../../../styles/abstracts' as ds;
+
+.text-link {
+    @include ds.typography(
+        ds.$font-family-body,
+        ds.$font-size-sm,
+        ds.$font-weight-bold,
+    );
+    @include ds.focus-visible;
+    display: inline-flex;
+    align-items: center;
+    gap: ds.$space-2;
+    padding: 0;
+    color: var(--color-icon-primary);
+    text-decoration: none;
+    cursor: pointer;
+    &:hover:not([aria-disabled='true']) {
+        color: var(--color-icon-primary-hover);
+        .text-link__label {
+            text-decoration: underline;
+        }
+    }
+    &:focus-visible {
+        border-radius: ds.$radius-sm;
+    }
+    &[aria-disabled='true'] {
+        color: var(--color-icon-primary-disabled);
+        cursor: not-allowed;
+    }
+}
+
+.text-link__icon {
+    flex-shrink: 0;
+}

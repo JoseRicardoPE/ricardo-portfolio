@@ -1,0 +1,27 @@
+@use '../../../styles/abstracts' as ds;
+
+.theme-toggle {
+    @include ds.focus-visible();
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: ds.$space-8;
+    height: ds.$space-8;
+    padding: 0;
+    background: transparent;
+    color: var(--color-interactive-primary);
+    border: 0;
+    border-radius: ds.$radius-sm;
+    cursor: pointer;
+    transition:
+        background-color ds.$motion-fast ds.$ease-standard,
+        color ds.$motion-fast ds.$ease-standard;
+
+    &:hover {
+        background-color: var(--color-background-hover);
+    }
+
+    &:focus-visible {
+        border-radius: ds.$radius-sm;
+    }
+}

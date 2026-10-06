@@ -1,0 +1,63 @@
+<span
+    [class]="'icon icon--' + size()"
+    aria-hidden="true"
+>
+    @switch (name()) {
+        @case ('email') {
+            <lucide-icon
+                [img]="MailIcon"
+                [size]="iconSize()"
+            >
+            </lucide-icon>
+        }
+        @case ('linkedin') {
+            <lucide-icon
+                [img]="LinkedinIcon"
+                [size]="iconSize()"
+            >
+            </lucide-icon>
+        }
+        @case ('github') {
+            <lucide-icon
+                [img]="GithubIcon"
+                [size]="iconSize()"
+            >
+            </lucide-icon>
+        }
+        @case ('whatsapp') {
+            <lucide-icon
+                [img]="WhatsappIcon"
+                [size]="iconSize()"
+            >
+            </lucide-icon>
+        }
+        @case ('moon') {
+            <lucide-icon
+                [img]="MoonIcon"
+                [size]="iconSize()"
+            >
+            </lucide-icon>
+        }
+        @case ('sun') {
+            <lucide-icon
+                [img]="SunIcon"
+                [size]="iconSize()"
+            >
+            </lucide-icon>
+        }
+        @case ('close') {
+            <lucide-angular
+                [img]="CloseIcon"
+                [size]="iconSize()"
+            >
+            </lucide-angular>
+        }
+        @case ('open') {
+            <lucide-angular
+                [img]="MenuIcon"
+                [size]="iconSize()"
+            >
+            </lucide-angular>
+        }
+    }
+</span>

@@ -1,0 +1,77 @@
+@use '../../../styles/abstracts' as ds;
+
+.textarea {
+    display: flex;
+    flex-direction: column;
+    gap: ds.$space-1;
+    width: 100%;
+}
+
+.textarea__label {
+    @include ds.typography(
+        ds.$font-family-body,
+        ds.$font-size-md,
+        ds.$font-weight-medium,
+    );
+    color: var(--color-text-primary);
+    margin-bottom: ds.calculateRem(2px);
+}
+
+.textarea__field {
+    @include ds.typography(
+        ds.$font-family-body,
+        ds.$font-size-sm,
+        ds.$font-weight-regular,
+        ds.$line-height-relaxed
+        );
+    @include ds.focus-visible;
+    width: 100%;
+    min-height: ds.$space-30;
+    padding: 0 ds.$space-3;
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-secondary);
+    border: ds.$border-1 solid var(--color-border-default);
+    border-radius: ds.$radius-md;
+    resize: none;
+    overflow-y: auto;
+    transition: 
+        border-color ds.$motion-fast ds.$ease-standard, 
+        background-color ds.$motion-fast ds.$ease-standard;
+    &::placeholder {
+        color: var(--color-text-secondary);
+        opacity: 1;
+    }
+    &:hover {
+        background-color: var(--color-background-hover);
+        border-color: var(--color-border-hover);
+    }
+    &:focus {
+        border-color: var(--color-border-focus);
+    }
+}
+
+.textarea__error,
+.textarea__helper {
+    @include ds.typography(
+        ds.$font-family-body,
+        ds.$font-size-xs,
+        ds.$font-weight-regular,
+        ds.$line-height-relaxed
+    );
+}
+
+.textarea--error {
+    .textarea__error {
+        color: var(--color-text-error);
+    }
+    .textarea__field {
+        border-color: var(--color-border-error);
+        &:hover {
+            border-color: var(--color-border-error);
+        }
+    }
+}
+
+.textarea__helper {
+    color: var(--color-text-secondary);
+}
