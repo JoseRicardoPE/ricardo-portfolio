@@ -1,0 +1,36 @@
+
+<div 
+    class="input"
+    [class.input--error]="error()"
+>
+    <label
+        class="input__label"
+        [for]="inputId()"
+    >
+        {{ label() }}
+    </label>
+    <input
+        class="input__field"
+        [id]="inputId()"
+        [type]="type()"
+        [placeholder]="placeholder()"
+        [attr.autocomplete]="autoComplete()"
+        [attr.aria-invalinputId]="error() ? 'true' : null"
+        [attr.aria-describedby]="helper() || error() ? inputId() + '-message' : null"
+    >
+        @if (error()) {
+            <span
+                class="input__error"
+                [id]="inputId() + '-message'"
+            >
+                {{ error()}}
+            </span>
+        } @else if (helper()) {
+            <span
+                class="input__helper"
+                [id]="inputId() + '-message'"
+            >
+                {{ helper() }}
+            </span>
+        }
+</div>

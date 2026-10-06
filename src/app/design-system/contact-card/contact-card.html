@@ -1,0 +1,16 @@
+<article class="contact-card">
+    <div class="contact-card__icon" aria-hidden="true">
+        <app-icon 
+            [name]="type()"
+            size="2xl"
+            >
+        </app-icon>
+    </div>
+    <div class="contact-card__content">
+        <h3 class="contact-card__title">{{ title() }}</h3>
+        <p class="contact-card__description">{{ description() }}</p>
+    </div>
+    <div class="contact-card__action">
+        <app-text-link [href]="href()">{{ actionLabel() }}</app-text-link>
+    </div>
+</article>

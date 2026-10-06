@@ -1,0 +1,94 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/breakpoints' as bp;
+
+.display {
+    @include mixins.typography(
+        vars.$font-family-display,
+        vars.$font-size-5xl,
+        vars.$font-weight-bold
+    );
+
+    @include bp.desktop {
+        font-size: vars.$font-size-7xl;
+    }
+}
+
+.heading-1 {
+    @include mixins.typography(
+        vars.$font-family-display,
+        vars.$font-size-4xl,
+        vars.$font-weight-bold
+    );
+
+    @include bp.desktop {
+        font-size: vars.$font-size-6xl;
+    }
+}
+
+.heading-2 {
+    @include mixins.typography(
+        vars.$font-family-display,
+        vars.$font-size-3xl,
+        vars.$font-weight-semibold
+    );
+
+    @include bp.desktop {
+        font-size: vars.$font-size-5xl;
+    }
+}
+
+.heading-3 {
+    @include mixins.typography(
+        vars.$font-family-display,
+        vars.$font-size-2xl,
+        vars.$font-weight-semibold
+    );
+
+    @include bp.desktop {
+        font-size: vars.$font-size-3xl;
+    }
+}
+
+// ========================================
+// Body
+// ========================================
+
+.body-large {
+    @include mixins.typography(
+        vars.$font-family-body,
+        vars.$font-size-lg,
+        vars.$font-weight-regular,
+        vars.$line-height-relaxed
+    );
+}
+
+.body {
+    @include mixins.typography(
+        vars.$font-family-body,
+        vars.$font-size-md,
+        vars.$font-weight-regular,
+        vars.$line-height-relaxed
+    );
+}
+
+.body-small {
+    @include mixins.typography(
+        vars.$font-family-body,
+        vars.$font-size-sm,
+        vars.$font-weight-regular,
+        vars.$line-height-relaxed
+    );
+}
+
+// ========================================
+// Label
+// ========================================
+
+.label {
+    @include mixins.typography(
+        vars.$font-family-body,
+        vars.$font-size-sm,
+        vars.$font-weight-medium
+    );
+}

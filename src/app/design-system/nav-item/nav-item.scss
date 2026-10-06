@@ -1,0 +1,30 @@
+@use '../../../styles/abstracts' as ds;
+
+.nav-item {
+    font-family: ds.$font-family-body;
+    font-size: var(--nav-item-font-size, #{ds.$font-size-md});
+    font-weight: var(--nav-item-font-weight, #{ds.$font-weight-bold});
+    line-height: ds.$line-height-default;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: ds.calculateRem(35px);
+    padding: ds.$space-2;
+    color: var(--nav-item-color, var(--color-interactive-primary));
+    text-decoration: none;
+    border-radius: ds.$radius-sm;
+    transition:
+        color ds.$motion-fast ds.$ease-standard,
+        background-color ds.$motion-fast ds.$ease-standard;
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--color-interactive-primary-hover)
+    }
+
+    @include ds.focus-visible();
+
+    &--active {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,15 @@
+@use 'variables' as vars;
+
+@mixin typography($font-family, $font-size, $font-weight, $line-height: vars.$line-height-default) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+
+@mixin focus-visible() {
+    &:focus-visible {
+        outline: vars.$focus-width solid var(--color-border-focus);
+        outline-offset: vars.$focus-offset;
+    }
+}

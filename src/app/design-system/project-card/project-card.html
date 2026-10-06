@@ -1,0 +1,26 @@
+<article class="project-card">
+    <div class="project-card__image-container">
+        <img
+            class="project-card__image"
+            [src]="imageSrc()"
+            [alt]="imageAlt()"
+        />
+    </div>
+    <div class="project-card__content">
+        <div class="project-card__info">
+            <span class="project-card__category">{{ category() }}</span>
+            <h3 class="project-card__title">{{ title() }}</h3>
+            <p class="project-card__description">{{ description() }}</p>
+            <div class="project-card__technologies">
+                @for (technology of technologies(); track technology) {
+                    <app-tag>
+                        {{ technology }}
+                    </app-tag>
+                }
+            </div>
+        </div>
+        <div class="project-card__actions">
+            <app-text-link [href]="projectUrl()">View Project</app-text-link>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,59 @@
+@use '../../../styles/abstracts' as ds;
+
+.button {
+    @include ds.typography(
+        ds.$font-family-body,
+        ds.$font-size-md,
+        ds.$font-weight-medium,
+        ds.$line-height-relaxed,
+    );
+    @include ds.focus-visible;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: ds.$touch-target-min;
+    padding: 0 ds.$space-6;
+    border: 0;
+    border-radius: ds.$radius-md;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: 
+        background-color ds.$motion-fast ds.$ease-standard,
+        color ds.$motion-fast ds.$ease-standard,
+        border-color ds.$motion-fast ds.$ease-standard,
+        box-shadow ds.$motion-fast ds.$ease-standard;
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+.button--primary {
+    background-color: var(--color-button-primary-background-default);
+    color: var(--color-button-primary-text-default);
+    &:hover:not(:disabled) {
+        background-color: var(--color-button-primary-background-hover);
+    }
+    &:disabled {
+        background-color: var(--color-button-primary-background-disabled);
+        color: var(--color-button-primary-text-disabled);
+    }
+}
+
+.button--secondary {
+    background-color: var(--color-button-secondary-background-default);
+    color: var(--color-button-secondary-text-default);
+    border: ds.$border-1 solid var(--color-button-secondary-border-default);
+    &:hover:not(:disabled) {
+        background-color: var(--color-button-secondary-background-hover);
+        border-color: var(--color-button-secondary-border-hover);
+    }
+    &:disabled {
+        background-color: var(--color-button-secondary-background-disabled);
+        color: var(--color-button-secondary-text-disabled);
+        border-color: var(--color-button-secondary-border-disabled);
+    }
+    &:focus-visible {
+        border-color: var(--color-button-secondary-border-focus);
+    }
+}
+

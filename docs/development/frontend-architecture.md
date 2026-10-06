@@ -70,7 +70,7 @@ Layout components may compose Design System components but should not contain fe
 
 ## Design System
 
-`design-system/` contains reusable visual primitives and design tokens derived from the approved Figma Design System.
+`design-system/` contains reusable Angular visual primitives derived from the approved Figma Design System.
 
 Examples:
 
@@ -80,9 +80,33 @@ Examples:
 - Tags
 - Text links
 - UI primitives
-- Design tokens
 
 Design System components must remain reusable and independent from specific product features.
+
+design-system/
+→ Angular UI components
+
+styles/
+→ styling foundations and tokens
+
+```
+src/
+├── app/
+│   └── design-system/
+│       ├── button/
+│       ├── input/
+│       ├── textarea/
+│       ├── tag/
+│       └── text-link/
+│
+├── styles/
+│   ├── abstracts/
+│   ├── base/
+│   ├── themes/
+│   └── utilities/
+│
+└── styles.scss
+```
 
 ## Initial public features:
 
@@ -198,6 +222,23 @@ The frontend follows these conventions:
 - Generic reusable code must have a clear reason to exist outside a feature.
 - Empty architectural directories should not be created without a concrete responsibility.
 
+## Responsive Strategy
+
+The frontend follows a Mobile First responsive strategy.
+
+Base styles must target mobile layouts first. Larger layouts should be progressively enhanced using `min-width` breakpoints.
+
+Responsive behavior must follow the approved Figma designs and Design System.
+
+Guidelines:
+
+- Mobile styles are the default styles.
+- Breakpoints should use `min-width`.
+- Breakpoints must be centralized in the styling architecture.
+- Components should adapt progressively from mobile to larger viewports.
+- Avoid desktop-first overrides unless a concrete implementation requirement justifies them.
+- Responsive behavior must preserve accessibility and content hierarchy.
+
 ## Naming
 
 Directories and files use lowercase kebab-case.
@@ -227,3 +268,80 @@ The architecture may evolve as implementation requirements become concrete.
 New abstractions, shared layers, state-management solutions, or architectural patterns should only be introduced when the application demonstrates a clear need for them.
 
 The project should prioritize simplicity, maintainability, separation of concerns, strong typing, accessibility, performance, and testability.
+
+## Styling Architecture
+
+The frontend uses SCSS with a structured styling architecture derived from the approved Figma Foundations and Design System.
+
+Global styling responsibilities are organized under:
+
+```
+src/styles/
+├── abstracts/
+│   ├── _variables.scss
+│   ├── _functions.scss
+│   ├── _mixins.scss
+│   └── _breakpoints.scss
+├── base/
+│   ├── _reset.scss
+│   ├── _typography.scss
+│   └── _base.scss
+├── themes/
+│   ├── _light.scss
+│   └── _dark.scss
+├── utilities/
+│   └── _utilities.scss
+└── _index.scss
+```
+
+Component-specific styles remain colocated with their Angular components.
+
+Example:
+
+```
+design-system/
+└── button/
+    ├── button.ts
+    ├── button.html
+    └── button.scss
+```
+
+### Styling Rules
+
+- Global styles must contain only application-wide styling concerns.
+- Component-specific styles must remain colocated with their components.
+- Design tokens should derive from the approved Figma Design System.
+- Components should consume semantic design tokens rather than hardcoded theme values.
+- Light and Dark themes should redefine semantic tokens instead of duplicating component styles.
+- Responsive styles must follow the Mobile First strategy.
+- Breakpoints should be centralized rather than duplicated across the application.
+- Mixins and functions should only be introduced when they provide concrete reuse.
+- Avoid unnecessary global selectors.
+- SCSS modules should be exposed through index files using `@forward` when this improves import consistency.
+- Components should avoid importing multiple internal styling partials individually when a centralized SCSS entry point is available.
+
+## Design Tokens
+
+Design tokens should be derived from the approved Figma Foundations.
+
+Semantic tokens are preferred over direct color values inside components.
+
+Example:
+
+```scss
+.project-card {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+}
+```
+
+Instead of:
+
+```scss
+.project-card {
+    background-color: #182033;
+    color: #cbd5e1;
+}
+```
+
+Theme-specific values should be resolved by the Light and Dark theme definitions rather than by individual components.

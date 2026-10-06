@@ -1,0 +1,35 @@
+@use '../../../styles/abstracts' as ds;
+
+.icon {
+    display: block;
+
+    &--xs {
+        width: ds.$icon-size-xs;
+        height: ds.$icon-size-xs;
+    }
+
+    &--sm {
+        width: ds.$icon-size-sm;
+        height: ds.$icon-size-sm;
+    }
+
+    &--md {
+        width: ds.$icon-size-md;
+        height: ds.$icon-size-md;
+    }
+
+    &--lg {
+        width: ds.$icon-size-lg;
+        height: ds.$icon-size-lg;
+    }
+
+    &--xl {
+        width: ds.$icon-size-xl;
+        height: ds.$icon-size-xl;
+    }
+
+    &--2xl {
+        width: ds.$icon-size-2xl;
+        height: ds.$icon-size-2xl;
+    }
+}

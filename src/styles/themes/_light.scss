@@ -1,0 +1,85 @@
+@use '../abstracts/colors' as c;
+@use '../abstracts/variables' as vars;
+
+:root,
+[data-theme='light'] {
+    // Background
+    --color-background-primary: #{c.$neutral-0};
+    --color-background-secondary: #{c.$neutral-50};
+    --color-background-hover: #{c.$neutral-200};
+
+    // Text
+    --color-text-primary: #{c.$neutral-950};
+    --color-text-secondary: #{c.$neutral-600};
+    --color-text-error: #{c.$error-600};
+
+    // Border
+    --color-border-default: #{c.$neutral-200};
+    --color-border-hover: #{c.$neutral-400};
+    --color-border-focus: #{c.$blue-800};
+    --color-border-error: #{c.$error-600};
+
+    // Interactive
+    --color-interactive-primary: #{c.$blue-800};
+    --color-interactive-primary-hover: #{c.$blue-700};
+    --color-interactive-disabled: #{c.$neutral-400};
+
+    // Button Primary
+    --color-button-primary-background-default: #{c.$blue-300};
+    --color-button-primary-background-hover: #{c.$blue-400};
+    --color-button-primary-background-disabled: #{c.$neutral-200};
+
+    --color-button-primary-text-default: #{c.$neutral-950};
+    --color-button-primary-text-disabled: #{c.$neutral-600};
+
+    --color-button-primary-border-default: #{c.$blue-300};
+    --color-button-primary-border-hover: #{c.$blue-400};
+    --color-button-primary-border-focus: #{c.$blue-800};
+    --color-button-primary-border-disabled: #{c.$neutral-200};
+
+    // Button Secondary
+    --color-button-secondary-background-default: #{c.$neutral-0};
+    --color-button-secondary-background-hover: #{c.$neutral-50};
+    --color-button-secondary-background-disabled: #{c.$neutral-100};
+
+    --color-button-secondary-text-default: #{c.$neutral-950};
+    --color-button-secondary-text-disabled: #{c.$neutral-500};
+
+    --color-button-secondary-border-default: #{c.$neutral-300};
+    --color-button-secondary-border-hover: #{c.$blue-800};
+    --color-button-secondary-border-focus: #{c.$blue-800};
+    --color-button-secondary-border-disabled: #{c.$neutral-200};
+
+    // Tag Green
+    --color-tag-green-background: #{c.$brand-100};
+    --color-tag-green-text: #{c.$brand-600};
+
+    // Tag Blue
+    --color-tag-blue-background: #{c.$blue-100};
+    --color-tag-blue-text: #{c.$blue-700};
+
+    // Tag Neutral
+    --color-tag-neutral-background: #{c.$neutral-100};
+    --color-tag-neutral-text: #{c.$neutral-700};
+
+    // Tag Orange
+    --color-tag-orange-background: #{c.$orange-100};
+    --color-tag-orange-text: #{c.$orange-500};
+
+    // Icon
+    --color-icon-primary: #{c.$blue-500};
+    --color-icon-primary-hover: #{c.$blue-400};
+    --color-icon-primary-disabled: #{c.$neutral-400};
+
+    // Shadows
+    --shadow-none: none;
+
+    --shadow-sm: #{vars.$shadow-sm-x} #{vars.$shadow-sm-y} #{vars.$shadow-sm-blur}
+        #{vars.$shadow-sm-spread} rgb(0 0 0 / 8%);
+
+    --shadow-md: #{vars.$shadow-md-x} #{vars.$shadow-md-y} #{vars.$shadow-md-blur}
+        #{vars.$shadow-md-spread} rgb(0 0 0 / 10%);
+
+    --shadow-lg: #{vars.$shadow-lg-x} #{vars.$shadow-lg-y} #{vars.$shadow-lg-blur}
+        #{vars.$shadow-lg-spread} rgb(0 0 0 / 14%);
+}
