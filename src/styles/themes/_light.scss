@@ -4,6 +4,7 @@
 :root,
 [data-theme='light'] {
     // Background
+    --image-background-page: url('/images/backgrounds/page-background-light.png');
     --color-background-primary: #{c.$neutral-0};
     --color-background-secondary: #{c.$neutral-50};
     --color-background-hover: #{c.$neutral-200};

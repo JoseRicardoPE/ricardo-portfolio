@@ -4,13 +4,13 @@
     >
         <a 
             class="header__brand"
-            router-link="/"
-            aria-label="Ir al inicio"
+            routerLink="/"
+            [attr.aria-label]="'header.homeAriaLabel' | translate"
             (click)="closeMenu()"
         >
             <img
                 class="header__logo"
-                src="images/isotipoPortfolio.png" 
+                src="images/isotipoPortfolio.webp" 
                 alt="isotipo Portfolio Ricardo"
             >
         </a>
@@ -19,24 +19,24 @@
          <div class="header__desktop-content">
             <nav
                 class="header__desktop-navigation"
-                aria-label="Navegación principal"
+                [attr.aria-label]="'header.mainNavigation' | translate"
             >
                 <app-nav-item
-                    label="Home"
+                    [label]="'navigation.home' | translate"
                     route="/"
                 ></app-nav-item>
                 <app-nav-item
-                    label="About"
+                    [label]="'navigation.about' | translate"
                     route="/about"
                 >
                 </app-nav-item>
                 <app-nav-item
-                    label="Projects"
+                    [label]="'navigation.projects' | translate"
                     route="/projects"
                 >
                 </app-nav-item>
                 <app-nav-item
-                    label="Contact"
+                    [label]="'navigation.contact' | translate"
                     route="/contact"
                 >
                 </app-nav-item>
@@ -53,7 +53,7 @@
             type="button"
             [attr.aria-expanded]="isMenuOpen()"
             aria-controls="mobile-menu"
-            [attr.aria-label]="isMenuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+            [attr.aria-label]="(isMenuOpen() ? 'header.closeMenu' : 'header.openMenu' | translate)"
             (click)="toggleMenu()"
         >
             @if (isMenuOpen()) {
@@ -78,34 +78,32 @@
         >
             <nav
                 class="header__mobile-navigation"
-                aria-label="Navegación principal"
+                [attr.aria-label]="'header.mainNavigation' | translate"
                 (click)="closeMenu()"
             >
                 <app-nav-item
-                    label="Home"
+                    [label]="'navigation.home' | translate"
                     route="/"
                 >
                 </app-nav-item>
                 <app-nav-item
-                    label="About"
+                    [label]="'navigation.about' | translate"
                     route="/about"
                 >
                 </app-nav-item>
                 <app-nav-item
-                    label="Projects"
+                    [label]="'navigation.projects' | translate"
                     route="/projects"
                 >
                 </app-nav-item>
                 <app-nav-item
-                    label="Contact"
+                    [label]="'navigation.contact' | translate"
                     route="/contact"
                 >
                 </app-nav-item>
             </nav>
             <div class="header__mobile-actions">
-                <app-language-selector
-                    (languageChange)="language.set($event)"
-                ></app-language-selector>
+                <app-language-selector></app-language-selector>
                 <app-theme-toggle></app-theme-toggle>
             </div>
         </div>

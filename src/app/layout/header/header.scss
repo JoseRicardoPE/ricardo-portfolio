@@ -10,7 +10,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: ds.$space-4 ds.$space-6;
+    padding: ds.$space-4 ds.$grid-margin-horizontal-mobile;
 }
 
 .header__brand {
@@ -39,7 +39,7 @@
     height: ds.$touch-target-min;
     padding: 0;
     background-color: transparent;
-    color: var(--color-icon-primary);
+    color: var(--color-interactive-primary);
     border: 0;
     cursor: pointer;
 }
@@ -68,8 +68,7 @@
 
 @include ds.tablet {
     .header__top {
-        padding: ds.$space-8 ds.$space-6;
-
+        padding: ds.$grid-margin-tablet-vertical ds.$grid-margin-tablet-horizontal;
     }
 
     .header__desktop-content {
@@ -95,5 +94,11 @@
     .header__menu-button,
     .header__mobile-menu {
         display: none;
+    }
+}
+
+@include ds.desktop {
+    .header__top {
+        padding: ds.$space-6 ds.$grid-margin-horizontal-desktop;
     }
 }

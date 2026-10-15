@@ -1,0 +1,11 @@
+<section class="contact-cta">
+    <h2 class="contact-cta__title">
+        {{ title() }}
+    </h2>
+    <p class="contact-cta__message">
+        {{ message() }}
+    </p>
+    <div class="contact-cta__actions">
+        <ng-content select="[contact-actions]"></ng-content>
+    </div>
+</section>

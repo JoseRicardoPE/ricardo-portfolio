@@ -7,7 +7,7 @@
     align-items: center;
     gap: ds.$space-12;
     width: 100%;
-    padding: ds.$space-6;
+    padding: ds.$grid-margin-horizontal-mobile;
     background-color: var(--color-background-primary);
 }
 
@@ -16,7 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: ds.$space-4;
+    gap: ds.$grid-gutter-mobile-sm;
 }
 
 .footer__brand {
@@ -51,7 +51,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: ds.$space-4;
+    gap: ds.$grid-gutter-mobile-sm;
 }
 
 .footer__social-link {
@@ -79,7 +79,7 @@
 @include ds.tablet {
     .footer {
         display: flex;
-        gap: ds.$space-6;
+        gap: ds.$grid-gutter-tablet;
         padding: ds.$space-12 ds.$space-30;
     }
 

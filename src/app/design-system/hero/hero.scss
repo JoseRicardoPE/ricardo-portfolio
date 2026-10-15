@@ -1,0 +1,92 @@
+@use '../../../styles/abstracts' as ds;
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: ds.$grid-gutter-mobile-lg;
+    padding: ds.$grid-margin-vertical-mobile ds.$grid-margin-horizontal-mobile;
+}
+
+.hero__image-content {
+    max-width: ds.calculateRem(400px);
+    width: 100%;
+    align-self: center;
+}
+
+.hero__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: ds.$radius-lg;
+    box-shadow: var(--shadow-md);
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: ds.$grid-gutter-mobile-sm;
+}
+
+.hero__eyebrow {
+    @include ds.typography(ds.$font-family-body,
+        ds.$font-size-sm,
+        ds.$font-weight-regular,
+        ds.$line-height-relaxed );
+    color: var(--color-text-secondary);
+}
+
+.hero__heading {
+    @include ds.typography(ds.$font-family-display,
+        ds.$font-size-4xl,
+        ds.$font-weight-bold );
+    color: var(--color-text-primary);
+}
+
+.hero__description {
+    @include ds.typography(ds.$font-family-body,
+        ds.$font-size-lg,
+        ds.$font-weight-regular,
+        ds.$line-height-relaxed );
+    color: var(--color-text-secondary);
+}
+
+.hero__technologies {
+    display: none;
+}
+
+.hero__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: ds.$grid-gutter-mobile-sm;
+}
+
+@include ds.desktop {
+    .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);;
+        align-items: center;
+        gap: ds.$grid-gutter-desktop-lg;
+        padding: ds.$grid-margin-vertical-desktop-lg ds.$grid-margin-horizontal-desktop;
+
+    }
+
+    .hero__image-content {
+        justify-self: flex-end;
+        order: 2;
+    }
+
+    .hero__content {
+        order: 1;
+    }
+
+    .hero__heading {
+        font-size: ds.$font-size-6xl;
+    }
+
+    .hero__actions {
+        flex-direction: row;
+    }
+}

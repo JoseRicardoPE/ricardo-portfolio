@@ -1,0 +1,35 @@
+@use '../../../../../styles/abstracts' as ds;
+
+.professional-strengths {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: ds.$grid-gutter-mobile-lg;
+    padding: ds.$grid-margin-vertical-mobile ds.$grid-margin-horizontal-mobile;
+}
+
+.professional-strengths__title {
+    @include ds.typography(ds.$font-family-display,
+        ds.$font-size-3xl,
+        ds.$font-weight-semibold,
+    );
+    color: var(--color-text-primary);
+    text-align: center;
+}
+
+.professional-strengths__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: ds.$space-3;
+}
+
+@include ds.desktop {
+    .professional-strengths {
+        gap: ds.$grid-gutter-desktop-md;
+        padding: ds.$grid-margin-vertical-desktop-md ds.$grid-margin-horizontal-desktop;
+    }
+    .professional-strengths__title {
+        font-size: ds.$font-size-5xl;
+    }
+}

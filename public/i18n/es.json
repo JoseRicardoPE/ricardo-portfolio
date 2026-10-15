@@ -1,0 +1,40 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "header": {
+    "homeAriaLable": "Ir al inicio",
+    "mainNavigation": "Navegación principal",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "FRONTEND ENGINEER",
+      "heading": "Construyo experiencias web modernas y escalables con Angular",
+      "description": "Frontend Engineer especializado en Angular, TypeScript y desarrollo de interfaces modernas.",
+      "viewProjects": "Ver proyectos"
+    },
+    "featuredProjects": {
+      "title": "PROYECTOS DESTACADOS"
+    },
+    "coreTechnologies": {
+      "title": "TECNOLOGÍAS PRINCIPALES"
+    },
+    "professionalStrengths": {
+      "title": "FORTALEZAS PROFESIONALES"
+    },
+    "contactCta": {
+      "title": "CONTACTO",
+      "message": "¿Te interesa trabajar conmigo?",
+      "contactMe": "Contáctame"
+    }
+  },
+  "common": {
+    "viewProjects": "Ver projectos",
+    "github": "GitHub"
+  }
+}
