@@ -1,0 +1,40 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "header": {
+    "homeAriaLabel": "Go to home",
+    "mainNavigation": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "FRONTEND ENGINEER",
+      "heading": "I build modern and scalable web experiences with Angular",
+      "description": "Frontend Engineer specialized in Angular, TypeScript and modern UI development.",
+      "viewProjects": "View projects"
+    },
+    "featuredProjects": {
+      "title": "FEATURED PROJECTS"
+    },
+    "coreTechnologies": {
+      "title": "CORE TECHNOLOGIES"
+    },
+    "professionalStrengths": {
+      "title": "PROFESSIONAL STRENGTHS"
+    },
+    "contactCta": {
+      "title": "CONTACT",
+      "message": "Interested in working together?",
+      "contactMe": "Contact Me"
+    }
+  },
+  "common": {
+    "viewProjects": "View projects",
+    "github": "GitHub"
+  }
+}

@@ -1,0 +1,30 @@
+<section class="hero">
+    <div class="hero__image-content">
+        <img
+            class="hero__image"
+            [src]="imageSrc()"
+            [alt]="imageAlt()"
+        >
+    </div>
+    <div class="hero__content">
+        <span class="hero__eyebrow">
+            {{ eyebrow() }}
+        </span>
+
+        <h1 class="hero__heading">
+            {{ heading() }}
+        </h1>
+
+        <p class="hero__description">
+            {{ description() }}
+        </p>
+
+        <div class="hero__technologies">
+            <ng-content select="[hero-technologies]"></ng-content>
+        </div>
+
+        <div class="hero__actions">
+            <ng-content select="[hero-actions]"></ng-content>
+        </div>
+    </div>
+</section>

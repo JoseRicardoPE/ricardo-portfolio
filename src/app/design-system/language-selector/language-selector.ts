@@ -1,6 +1,6 @@
-import { Component, ChangeDetectionStrategy, input, output } from '@angular/core';
-
-export type Language = 'es' | 'en';
+import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
+import { AppLanguage } from '../../core/models/app-language.model';
+import { AppLanguageService } from '../../core/services/app-language.service';
 
 @Component({
   selector: 'app-language-selector',
@@ -10,13 +10,13 @@ export type Language = 'es' | 'en';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LanguageSelector {
-  readonly language = input<Language>('es');
-  readonly languageChange = output<Language>();
-
-  selectLanguage(language: Language): void {
+  private readonly appLanguageService = inject(AppLanguageService);
+  readonly language = this.appLanguageService.language;
+  
+  selectLanguage(language: AppLanguage): void {
     if (language === this.language()) {
       return;
     }
-    this.languageChange.emit(language);
+    this.appLanguageService.setLanguage(language);
   }
 }

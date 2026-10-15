@@ -1,10 +1,11 @@
 import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 import { TextLink } from '../text-link/text-link';
 import { Tag } from '../tag/tag';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-project-card',
-  imports: [TextLink, Tag],
+  imports: [TextLink, Tag, TranslatePipe],
   templateUrl: './project-card.html',
   styleUrl: './project-card.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

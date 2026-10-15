@@ -3,6 +3,7 @@
 
 [data-theme='dark'] {
     // Background
+    --image-background-page: url('/images/backgrounds/page-background-dark.png');
     --color-background-primary: #{c.$neutral-950};
     --color-background-secondary: #{c.$neutral-900};
     --color-background-hover: #{c.$neutral-700};

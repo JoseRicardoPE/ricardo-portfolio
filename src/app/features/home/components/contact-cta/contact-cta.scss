@@ -1,0 +1,41 @@
+@use '../../../../../styles/abstracts' as ds;
+
+.contact-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: ds.$grid-gutter-mobile-lg;
+    padding: ds.$grid-margin-vertical-mobile ds.$grid-margin-horizontal-mobile;
+}
+
+.contact-cta__title {
+    @include ds.typography(ds.$font-family-display,
+        ds.$font-size-3xl,
+        ds.$font-weight-semibold,
+    );
+    color: var(--color-text-primary);
+    text-align: center;
+}
+
+.contact-cta__message {
+    @include ds.typography(ds.$font-family-body,
+        ds.$font-size-sm,
+        ds.$font-weight-regular,
+    );
+    color: var(--color-text-secondary);
+    text-align: center;
+}
+
+@include ds.desktop {
+    .contact-cta {
+        gap: ds.calculateRem(32px);
+        padding: ds.$grid-margin-vertical-desktop-md ds.$grid-margin-horizontal-desktop;
+    }
+    .contact-cta__title {
+        font-size: ds.$font-size-5xl;
+    }
+    .contact-cta__message {
+        font-size: ds.$font-size-md;
+    }
+}

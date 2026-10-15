@@ -1,0 +1,19 @@
+<section class="projects-section">
+    <h2 class="projects-section__title">
+        {{ title() }}
+    </h2>
+    <div class="projects-section__grid">
+        @for (project of projects(); track project._id) {
+            <app-project-card
+                [imageSrc]="project.thumbnail"
+                [imageAlt]="project.title"
+                [category]="project.category"
+                [title]="project.title"
+                [description]="project.shortDescription[language()]"
+                [technologies]="getTechnologyNames(project)"
+                [projectUrl]="'/projects/' + project.slug"
+            >
+            </app-project-card>
+        }
+    </div>
+</section>

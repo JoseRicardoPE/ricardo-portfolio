@@ -13,3 +13,38 @@
         outline-offset: vars.$focus-offset;
     }
 }
+
+@mixin button-base() {
+    @include typography(
+        vars.$font-family-body,
+        vars.$font-size-md,
+        vars.$font-weight-medium,
+        vars.$line-height-relaxed
+    );
+    @include focus-visible;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: vars.$touch-target-min;
+    padding: 0 vars.$space-6;
+    border: 0;
+    border-radius: vars.$radius-md;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition:
+        background-color vars.$motion-fast vars.$ease-standard,
+        color vars.$motion-fast vars.$ease-standard,
+        border-color vars.$motion-fast vars.$ease-standard,
+        box-shadow vars.$motion-fast vars.$ease-standard;
+}
+
+@mixin button-primary() {
+    background-color: var(--color-button-primary-background-default);
+    color: var(--color-button-primary-text-default);
+}
+
+@mixin button-secondary() {
+    background-color: var(--color-button-secondary-background-default);
+    color: var(--color-button-secondary-text-default);
+    border: vars.$border-1 solid var(--color-button-secondary-border-default);
+}

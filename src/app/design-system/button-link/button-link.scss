@@ -1,0 +1,36 @@
+@use '../../../styles/abstracts' as ds;
+
+.button-link {
+    @include ds.button-base();
+    text-decoration: none;
+}
+
+.button-link--primary {
+    @include ds.button-primary();
+    
+    &:hover {
+        background-color: var(--color-button-primary-background-hover);
+    }
+}
+
+.button-link--secondary {
+    @include ds.button-secondary();
+    
+    &:hover {
+        background-color: var(--color-button-secondary-background-hover);
+        border-color: var(--color-button-secondary-border-hover);
+    }
+    
+    &:focus-visible {
+        border-color: var(--color-button-secondary-border-focus);
+    }
+}
+
+.button-link--full-width {
+    width: 100%;
+    
+    @include ds.desktop {
+        width: auto;
+    }
+}
+

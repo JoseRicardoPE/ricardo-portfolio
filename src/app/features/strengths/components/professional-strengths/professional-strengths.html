@@ -1,0 +1,10 @@
+<section class="professional-strengths">
+    <h2 class="professional-strengths__title">
+        {{ title() }}
+    </h2>
+    <div class="professional-strengths__stack">
+        @for (strength of strengths(); track strength._id) {
+            <app-tag>{{ strength.name[language()] }}</app-tag>
+        }
+    </div>
+</section>

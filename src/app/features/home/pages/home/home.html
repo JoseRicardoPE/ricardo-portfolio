@@ -1,1 +1,49 @@
-<p>Home works!</p>
+<app-hero
+    imageSrc="/images/home/hero-home.webp"
+    imageAlt="Preview of Ricardo Pacheco's portfolio project"
+    [eyebrow]="'home.hero.eyebrow' | translate"
+    [heading]="'home.hero.heading' | translate"
+    [description]="'home.hero.description' | translate"
+>
+    <app-button-link
+        hero-actions
+        href="/projects"
+        [fullWidth]="true"
+    >
+        {{ 'home.hero.viewProjects' | translate }}
+    </app-button-link>
+    <app-button-link
+        hero-actions
+        href="https://github.com/JoseRicardoPE"
+        [fullWidth]="true"
+        variant="secondary"
+        [external]="true"
+    >
+        {{ 'common.github' | translate }}
+    </app-button-link>
+</app-hero>
+<app-projects-section
+    [title]="'home.featuredProjects.title' | translate"
+    [projects]="featuredProjects()"
+></app-projects-section>
+<app-core-technologies
+    [title]="'home.coreTechnologies.title' | translate"
+    [technologies]="coreTechnologies()"
+></app-core-technologies>
+<app-professional-strengths
+    [title]="'home.professionalStrengths.title' | translate"
+    [strengths]="professionalStrengths()"
+    [language]="language()"
+>
+</app-professional-strengths>
+<app-contact-cta
+    [title]="'home.contactCta.title' | translate"
+    [message]="'home.contactCta.message' | translate"
+>
+    <app-button-link
+        contact-actions
+        href="/contact"
+    >
+        {{ 'home.contactCta.contactMe' | translate}}
+    </app-button-link>
+</app-contact-cta>

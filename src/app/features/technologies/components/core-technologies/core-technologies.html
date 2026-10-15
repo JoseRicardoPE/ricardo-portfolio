@@ -1,0 +1,10 @@
+<section class="core-technologies">
+    <h2 class="core-technologies__title">
+        {{ title() }}
+    </h2>
+    <div class="core-technologies__list">
+        @for (technology of technologies(); track technology._id) {
+            <app-tag>{{ technology.name }}</app-tag>
+        }
+    </div>
+</section>

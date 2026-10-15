@@ -1,0 +1,26 @@
+<ng-template #content>
+    <ng-content></ng-content>
+</ng-template>
+@if (external()) {
+    <a
+        class="button-link"
+        [class.button-link--primary]="variant() === 'primary'"
+        [class.button-link--secondary]="variant() === 'secondary'"
+        [class.button-link--full-width]="fullWidth()"
+        [href]="href()"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </a>
+} @else {
+    <a
+        class="button-link"
+        [class.button-link--primary]="variant() === 'primary'"
+        [class.button-link--secondary]="variant() === 'secondary'"
+        [class.button-link--full-width]="fullWidth()"
+        [routerLink]="href()"
+    >
+        <ng-container [ngTemplateOutlet]="content"></ng-container>
+    </a>
+}

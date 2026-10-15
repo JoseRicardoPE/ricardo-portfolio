@@ -64,23 +64,32 @@ $tag-height-md: f.calculateRem(35px);
 
 // Mobile
 $grid-columns-mobile: 4;
-$grid-margin-mobile: $space-6;
-$grid-gutter-mobile: $space-4;
+$grid-margin-horizontal-mobile: $space-6;
+$grid-margin-vertical-mobile: $space-8;
+$grid-gutter-mobile-sm: $space-4;
+$grid-gutter-mobile-lg: $space-6; 
 
 // Tablet
 $grid-columns-tablet: 8;
-$grid-margin-tablet: $space-8;
+$grid-margin-tablet-horizontal: $space-6;
+$grid-margin-tablet-vertical: $space-8;
 $grid-gutter-tablet: $space-6;
 
 // Desktop
 $grid-columns-desktop: 12;
-$grid-margin-desktop: $space-16;
-$grid-gutter-desktop: $space-6;
+$grid-margin-horizontal-desktop: $space-30;
+$grid-margin-vertical-desktop-md: $space-16;
+$grid-margin-vertical-desktop-lg: $space-20;
+$grid-gutter-desktop-sm: $space-6;
+$grid-gutter-desktop-md: $space-10;
+$grid-gutter-desktop-lg: $space-20;
 
 // Large Desktop
 $grid-columns-large-desktop: 12;
-$grid-margin-large-desktop: $space-30;
-$grid-gutter-large-desktop: $space-6;
+$grid-margin-horizontal-large-desktop: $space-30;
+$grid-margin-vertical-large-desktop: $space-20;
+$grid-gutter-large-desktop-sm: $space-6;
+$grid-gutter-large-desktop-lg: $space-20;
 
 // Container
 $container-max-width: f.calculateRem(1200px);
