@@ -8,8 +8,9 @@
         [class.button-link--secondary]="variant() === 'secondary'"
         [class.button-link--full-width]="fullWidth()"
         [href]="href()"
-        target="_blank"
-        rel="noopener noreferrer"
+        [attr.download]="download()"
+        [attr.target]="download() !== null ? null : '_blank'"
+        [attr.rel]="download() !== null ? null : 'noopener noreferrer'"
     >
         <ng-container [ngTemplateOutlet]="content"></ng-container>
     </a>

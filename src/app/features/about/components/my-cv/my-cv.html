@@ -1,0 +1,32 @@
+<section
+    class="my-cv"
+    aria-labelledby="my-cv-title"
+>
+    <h2
+        id="my-cv-title"
+        class="my-cv__title"
+    >
+        {{ title() }}
+    </h2>
+    <div class="my-cv__content">
+        <div class="my-cv__icon">
+            <img
+            class="my-cv__icon-image"
+            [src]="imageSrc()"
+            [alt]="imageAlt()"
+        />
+        </div>
+        <div class="my-cv__info">
+            <h3 class="my-cv__heading">
+                {{ heading() }}
+            </h3>
+            <p class="my-cv__description">
+                {{ description() }}
+            </p>
+        </div>
+    </div>
+    <div class="my-cv__actions">
+        <ng-content select="[cv-actions]"></ng-content>
+    </div>
+</section>
+

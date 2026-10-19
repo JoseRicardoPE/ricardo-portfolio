@@ -1,0 +1,30 @@
+<section
+    class="about-technologies"
+    aria-labelledby="about-technologies-title"
+>
+    <h2
+        class="about-technologies__title h2"
+        id="about-technologies-title"
+    >
+        {{ title() }}
+    </h2>
+
+    <div class="about-technologies__groups">
+        @for (group of groups(); track group.category) {
+            @if (group.technologies.length) {
+                <div class="about-technologies__group">
+                    <h3 class="about-technologies__group-title h3">
+                        {{ group.category | translate}}
+                    </h3>
+                    <div class="about-technologies__tags">
+                        @for (technology of group.technologies; track technology._id) {
+                            <app-tag color="neutral">
+                                {{ technology.name }}
+                            </app-tag>
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</section>

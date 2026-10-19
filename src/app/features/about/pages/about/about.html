@@ -1,8 +1,42 @@
 <app-hero
     imageSrc="/images/about/hero-about-me.png"
     imageAlt="Preview of Ricardo Pacheco's portfolio project"
-    eyebrow="ABOUT ME"
-    heading="Building modern web experiences with purpose"
-    description="Frontend Engineer specialized in Angular, with experience building scalable applications and a passion for clean code and great user experience."
+    [eyebrow]="'about.hero.eyebrow' | translate"
+    [heading]="'about.hero.heading' | translate"
+    [description]="'about.hero.description' | translate"
 >
 </app-hero>
+<app-professional-profile
+    [title]="'about.profile.title' | translate"
+    [description]="'about.profile.description' | translate"
+></app-professional-profile>
+<app-my-cv
+    [title]="'about.myCv.title' | translate"
+    [heading]="'about.myCv.heading' | translate"
+    [description]="'about.myCv.description' | translate"
+    imageSrc="/images/cv/cv.png"
+    imageAlt="Illustration of Ricardo Pacheco's CV available for PDF download and online viewing"
+>
+    <app-button-link
+        cv-actions
+        href="/cv_Ricardo/FrontendDeveloper_RicardoPacheco.pdf"
+        [external]="true"
+        download="Ricardo_Pacheco_CV.pdf"
+        [fullWidth]="true"
+    >
+        {{ 'about.myCv.downloadLabel' | translate }}
+    </app-button-link>
+    <app-button-link
+        cv-actions
+        href="https://fullstackricardo.com/"
+        variant="secondary"
+        [external]="true"
+        [fullWidth]="true"
+    >
+        {{ 'about.myCv.onlineLabel' | translate }}
+    </app-button-link>
+</app-my-cv>
+<app-about-technologies
+    [title]="'about.technologies.title' | translate"
+    [technologies]="technologies()"
+></app-about-technologies>

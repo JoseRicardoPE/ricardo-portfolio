@@ -36,5 +36,32 @@
   "common": {
     "viewProjects": "View projects",
     "github": "GitHub"
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "ABOUT ME",
+      "heading": "Building modern web experiences with purpose",
+      "description": "Frontend Engineer specialized in Angular, with experience building scalable applications and a passion for clean code and great user experience."
+    },
+    "myCv": {
+      "title": "MY CV",
+      "heading": "Get a copy of my CV",
+      "description": "Download the PDF or view the online version.",
+      "downloadLabel": "Download CV (PDF)",
+      "onlineLabel": "View Online CV"
+    },
+    "profile": {
+      "title": "PROFESSIONAL PROFILE",
+      "description": "Frontend Engineer with 4 years of experience building modern web applications with Angular, TypeScript, HTML5 and SCSS. Specialized in translating Figma designs into responsive, pixel-perfect interfaces, working with reusable components, Design Systems and scalable frontend architectures. I also continue strengthening my backend skills with Node.js, Express and MongoDB to expand my understanding of full-stack application development."
+    },
+    "technologies": {
+      "title": "TECHNOLOGIES",
+      "categories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "tools": "Tools",
+        "practices": "Practices"
+      }
+    }
   }
 }

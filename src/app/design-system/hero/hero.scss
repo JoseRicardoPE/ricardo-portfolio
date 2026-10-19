@@ -1,5 +1,11 @@
 @use '../../../styles/abstracts' as ds;
 
+@keyframes reveal-hero-eyebrow {
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
 .hero {
     display: flex;
     flex-direction: column;
@@ -23,6 +29,7 @@
 }
 
 .hero__content {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: ds.$grid-gutter-mobile-sm;
@@ -34,6 +41,8 @@
         ds.$font-weight-regular,
         ds.$line-height-relaxed );
     color: var(--color-text-secondary);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    animation: reveal-hero-eyebrow 6s forwards linear;
 }
 
 .hero__heading {
@@ -63,10 +72,17 @@
     gap: ds.$grid-gutter-mobile-sm;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .hero__eyebrow {
+        animation: none;
+        clip-path: none;
+    }
+}
+
 @include ds.desktop {
     .hero {
         display: grid;
-        grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);;
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
         align-items: center;
         gap: ds.$grid-gutter-desktop-lg;
         padding: ds.$grid-margin-vertical-desktop-lg ds.$grid-margin-horizontal-desktop;
@@ -88,5 +104,6 @@
 
     .hero__actions {
         flex-direction: row;
+        gap: ds.$grid-gutter-desktop-sm;
     }
 }

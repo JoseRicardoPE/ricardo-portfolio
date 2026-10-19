@@ -7,6 +7,7 @@
         ds.$font-weight-bold,
     );
     @include ds.focus-visible;
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: ds.$space-2;
@@ -14,15 +15,29 @@
     color: var(--color-icon-primary);
     text-decoration: none;
     cursor: pointer;
-    &:hover:not([aria-disabled='true']) {
-        color: var(--color-icon-primary-hover);
-        .text-link__label {
-            text-decoration: underline;
-        }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: ds.calculateRem(2px);
+        background-color: var(--color-icon-primary-hover);
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform ds.$motion-slow ds.$ease-standard;
     }
+
+    &:hover:not([aria-disabled='true'])::after {
+        transform: scaleX(1);
+        // transform-origin: bottom left;
+    }
+
     &:focus-visible {
         border-radius: ds.$radius-sm;
     }
+
     &[aria-disabled='true'] {
         color: var(--color-icon-primary-disabled);
         cursor: not-allowed;
