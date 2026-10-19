@@ -16,4 +16,5 @@ export class ButtonLink {
   readonly variant = input<ButtonLinkVariant>('primary');
   readonly external = input(false);
   readonly fullWidth = input(false);
+  readonly download = input<string | null>(null);
 }

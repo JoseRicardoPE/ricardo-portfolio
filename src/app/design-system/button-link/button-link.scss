@@ -20,10 +20,6 @@
         background-color: var(--color-button-secondary-background-hover);
         border-color: var(--color-button-secondary-border-hover);
     }
-    
-    &:focus-visible {
-        border-color: var(--color-button-secondary-border-focus);
-    }
 }
 
 .button-link--full-width {

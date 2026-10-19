@@ -46,5 +46,5 @@
 @mixin button-secondary() {
     background-color: var(--color-button-secondary-background-default);
     color: var(--color-button-secondary-text-default);
-    border: vars.$border-1 solid var(--color-button-secondary-border-default);
+    border: vars.$border-2 solid var(--color-button-secondary-border-default);
 }

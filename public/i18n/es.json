@@ -36,5 +36,32 @@
   "common": {
     "viewProjects": "Ver projectos",
     "github": "GitHub"
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "SOBRE MÍ",
+      "heading": "Construyendo experiencias web modernas con propósito",
+      "description": "Ingeniero Frontend especializado en Angular, con experiencia en el desarrollo de aplicaciones escalables y pasión por el código limpio y una excelente experiencia de usuario."
+    },
+    "myCv": {
+      "title": "MI CV",
+      "heading": "Obtén una copia de mi CV",
+      "description": "Descarga el PDF o consulta la versión en línea.",
+      "downloadLabel": "Descargar CV (PDF)",
+      "onlineLabel": "Ver en línea CV"
+    },
+    "profile": {
+      "title": "PERFIL PROFESIONAL",
+      "description": "Ingeniero Frontend con 4 años de experiencia desarrollando aplicaciones web modernas con Angular, TypeScript, HTML5 y SCSS. Especializado en transformar diseños de Figma en interfaces responsivas y Pixel Perfect, trabajando con componentes reutilizables, Design Systems y arquitecturas frontend escalables. Además, continúo fortaleciendo mis conocimientos en backend con Node.js, Express y MongoDB para ampliar mi comprensión del desarrollo de aplicaciones Full Stack."
+    },
+    "technologies": {
+      "title": "TECNOLOGÍAS",
+      "categories": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "tools": "Herramientas",
+        "practices": "Prácticas"
+      }
+    }
   }
 }
