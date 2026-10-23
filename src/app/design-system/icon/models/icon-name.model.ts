@@ -1,0 +1,1 @@
+export type IconName = 'email' | 'linkedin' | 'github' | 'whatsapp' | 'sun' | 'moon' | 'close' | 'open' | 'chevron-left' | 'chevron-right';

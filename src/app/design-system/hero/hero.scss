@@ -72,13 +72,6 @@
     gap: ds.$grid-gutter-mobile-sm;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .hero__eyebrow {
-        animation: none;
-        clip-path: none;
-    }
-}
-
 @include ds.desktop {
     .hero {
         display: grid;
@@ -102,8 +95,19 @@
         font-size: ds.$font-size-6xl;
     }
 
+    .hero__description {
+        font-size: ds.$font-size-xl;
+    }
+
     .hero__actions {
         flex-direction: row;
         gap: ds.$grid-gutter-desktop-sm;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero__eyebrow {
+        animation: none;
+        clip-path: none;
     }
 }

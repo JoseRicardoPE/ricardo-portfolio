@@ -18,12 +18,11 @@
     text-align: center;
 }
 
-.professional-profile__description{
+.professional-profile__description {
     @include ds.typography(ds.$font-family-body,
         ds.$font-size-md,
         ds.$font-weight-regular,
-        ds.$line-height-relaxed
-    );
+        ds.$line-height-relaxed );
     color: var(--color-text-secondary);
 }
 
@@ -35,5 +34,9 @@
 
     .professional-profile__title {
         font-size: ds.$font-size-5xl;
+    }
+
+    .professional-profile__description {
+        font-size: ds.$font-size-xl;
     }
 }

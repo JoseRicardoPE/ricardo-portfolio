@@ -1,9 +1,21 @@
 @use '../../../styles/abstracts' as ds;
 
+@property --tag-border-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes tag-border-rotate {
+    to {
+        --tag-border-angle: 360deg;
+    }
+}
+
 .tag {
     @include ds.typography(
         ds.$font-family-body,
-        ds.$font-size-sm,
+        ds.$font-size-xs,
         ds.$font-weight-medium,
     );
     height: ds.$tag-height-sm;
@@ -12,31 +24,56 @@
     justify-content: center;
     padding: 0 ds.$space-3;
     border-radius: ds.$radius-full;
+    border: ds.calculateRem(2px) solid transparent;
+    background: 
+        linear-gradient(
+            var(--tag-background),
+            var(--tag-background)
+        ) padding-box,
+        conic-gradient(
+            from var(--tag-border-angle),
+            transparent 0%,
+            transparent 25%,
+            var(--tag-border-highlight) 75%,
+            transparent 100%
+        ) border-box;
+    color: var(--tag-text);
+    animation: tag-border-rotate 3s linear infinite;
 }
 
 .tag--neutral {
-    background-color: var(--color-tag-neutral-background);
-    color: var(--color-tag-neutral-text);
+    --tag-background: var(--color-tag-neutral-background);
+    --tag-text: var(--color-tag-neutral-text);
+    --tag-border-highlight: var(--color-border-focus);
 }
 
 .tag--green {
-    background-color: var(--color-tag-green-background);
-    color: var(--color-tag-green-text);
+    --tag-background: var(--color-tag-green-background);
+    --tag-text: var(--color-tag-green-text);
+    --tag-border-highlight: var(--color-tag-green-text);
 }
 
 .tag--blue {
-    background-color: var(--color-tag-blue-background);
-    color: var(--color-tag-blue-text);
+    --tag-background: var(--color-tag-blue-background);
+    --tag-text: var(--color-tag-blue-text);
+    --tag-border-highlight: var(--color-tag-blue-text);
 }
 
 .tag--orange {
-    background-color: var(--color-tag-orange-background);
-    color: var(--color-tag-orange-text);
+    --tag-background: var(--color-tag-orange-background);
+    --tag-text: var(--color-tag-orange-text);
+    --tag-border-highlight: var(--color-tag-orange-text);
 }
 
 @include ds.desktop {
-    .tag {
+    .tag:not(.tag--sm) {
         height: ds.$tag-height-md;
         font-size: ds.$font-size-md;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tag {
+        animation: none;
     }
 }

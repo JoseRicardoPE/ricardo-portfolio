@@ -1,0 +1,22 @@
+<section class="other-projects">
+    <h2 class="other-projects__title">
+        {{ title() }}
+    </h2>
+    <div class="other-projects__info">
+        <div class="other-projects__content-image">
+            <img 
+                class="other-projects__image"
+                src="/images/projects/other-projects/other-projects.webp"
+                [alt]="'projects.otherProjects.imageAlt' | translate"
+                loading="lazy"
+                decoding="async"
+            >
+        </div>
+        <h3 class="other-projects__heading">
+            {{ heading() }}
+        </h3>
+        <p class="other-projects__description">
+            {{ description() }}
+        </p>
+    </div>
+</section>

@@ -5,7 +5,7 @@
 // ========================================
 
 // Font Families
-$font-family-display: 'Syne', sans-serif;
+$font-family-display: "Montserrat", sans-serif;
 $font-family-body: 'Inter', sans-serif;
 
 // Font Weights
@@ -40,6 +40,7 @@ $space-1: f.calculateRem(4px);
 $space-2: f.calculateRem(8px);
 $space-3: f.calculateRem(12px);
 $space-4: f.calculateRem(16px);
+$space-5: f.calculateRem(20px);
 $space-6: f.calculateRem(24px);
 $space-7: f.calculateRem(28px);
 $space-8: f.calculateRem(32px);

@@ -1,4 +1,9 @@
 {
+  "states": {
+    "loading": "Loading projects...",
+    "error": "Unable to load projects.",
+    "empty": "No projects are available yet."
+  },
   "navigation": {
     "home": "Home",
     "about": "About",
@@ -34,7 +39,7 @@
     }
   },
   "common": {
-    "viewProjects": "View projects",
+    "viewProjects": "View project",
     "github": "GitHub"
   },
   "about": {
@@ -52,7 +57,13 @@
     },
     "profile": {
       "title": "PROFESSIONAL PROFILE",
-      "description": "Frontend Engineer with 4 years of experience building modern web applications with Angular, TypeScript, HTML5 and SCSS. Specialized in translating Figma designs into responsive, pixel-perfect interfaces, working with reusable components, Design Systems and scalable frontend architectures. I also continue strengthening my backend skills with Node.js, Express and MongoDB to expand my understanding of full-stack application development."
+      "description": [
+        "I'm a Frontend Engineer with 4 years of experience developing modern, responsive, and scalable web applications, specializing in Angular, TypeScript, HTML5, and SCSS.",
+        "I have contributed to the development and maintenance of high-traffic applications, transforming Figma designs into pixel-perfect interfaces, implementing Design Systems, and building reusable components that ensure visual consistency, maintainability, and scalability.",
+        "I have experience collaborating closely with UX/UI and development teams in agile environments using SCRUM, applying frontend architecture best practices, clean code principles, and UI/UX issue resolution to enhance the overall user experience.",
+        "I have expanded my skills into Full Stack Development through personal projects using Node.js, Express, MongoDB, Mongoose, and REST APIs. These include developing and deploying a Full Stack application with Angular 21, integrating a REST API, MongoDB Atlas, and production environment configurations. I'm passionate about building high-quality digital solutions with clean, reusable, and maintainable code.",
+        "I'm currently strengthening my backend development skills, complementing my Angular expertise and progressively expanding my capabilities as a Full Stack Developer."
+      ]
     },
     "technologies": {
       "title": "TECHNOLOGIES",
@@ -62,6 +73,23 @@
         "tools": "Tools",
         "practices": "Practices"
       }
+    }
+  },
+  "projects": {
+    "hero": {
+      "eyebrow": "MY WORK",
+      "heading": "Projects that solve real problems",
+      "description": "A selection of web applications and digital solutions built with Angular, TypeScript and modern technologies."
+    },
+    "featuredProjects": {
+      "title": "PROJECTS"
+    },
+    "otherProjects": {
+      "title": "OTHER PROJECTS",
+      "heading": "More projects coming soon",
+      "description": "I'm constantly working on new ideas and open source contributions.",
+
+      "imageAlt": "Illustration of a code window under construction with a gear and a safety barrier"
     }
   }
 }
