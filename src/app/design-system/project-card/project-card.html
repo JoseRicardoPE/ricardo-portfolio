@@ -1,4 +1,7 @@
-<article class="project-card">
+<article 
+    class="project-card"
+    [class.project-card--no-shadow]="!shadow()"
+>
     <div class="project-card__image-container">
         <img
             class="project-card__image"
@@ -8,12 +11,16 @@
     </div>
     <div class="project-card__content">
         <div class="project-card__info">
-            <span class="project-card__category">{{ category() }}</span>
-            <h3 class="project-card__title">{{ title() }}</h3>
-            <p class="project-card__description">{{ description() }}</p>
+            <div class="project-card__info-wrapper">
+                <span class="project-card__category">{{ category() }}</span>
+                <h3 class="project-card__title">{{ title() }}</h3>
+                <p class="project-card__description">{{ description() }}</p>
+            </div>
             <div class="project-card__technologies">
                 @for (technology of technologies(); track technology) {
-                    <app-tag>
+                    <app-tag
+                        size="sm"
+                    >
                         {{ technology }}
                     </app-tag>
                 }

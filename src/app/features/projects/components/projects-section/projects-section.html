@@ -2,18 +2,52 @@
     <h2 class="projects-section__title">
         {{ title() }}
     </h2>
-    <div class="projects-section__grid">
-        @for (project of projects(); track project._id) {
-            <app-project-card
-                [imageSrc]="project.thumbnail"
-                [imageAlt]="project.title"
-                [category]="project.category"
-                [title]="project.title"
-                [description]="project.shortDescription[language()]"
-                [technologies]="getTechnologyNames(project)"
-                [projectUrl]="'/projects/' + project.slug"
+    <div
+        class="projects-section__carousel-wrapper"
+        [class.projects-section__carousel-wrapper--active]="layout() === 'carousel'"
+    >
+        @if (layout() === 'carousel') {
+            <button
+                type="button"
+                class="projects-section__control projects-section__control--previous"
+                aria-label="Proyecto anterior"
+                (click)="scrollCarousel('previous')"
             >
-            </app-project-card>
+                <span aria-hidden="true">
+                    <app-icon name="chevron-left" size="lg"></app-icon>
+                </span>
+            </button>
+        }
+        <div
+            #carousel
+            class="projects-section__grid"
+            [class.projects-section__grid--carousel]="layout() === 'carousel'"
+        >
+            @for (project of projects(); track project._id) {
+                <app-project-card
+                    [imageSrc]="project.thumbnail"
+                    [imageAlt]="project.title"
+                    [category]="project.category"
+                    [title]="project.title"
+                    [description]="project.shortDescription[language()]"
+                    [technologies]="getTechnologyNames(project)"
+                    [projectUrl]="'/projects/' + project.slug"
+                    [shadow]="layout() !== 'carousel'"
+                >
+                </app-project-card>
+            }
+        </div>
+        @if (layout() === 'carousel') {
+            <button
+                type="button"
+                class="projects-section__control projects-section__control--next"
+                aria-label="Proyecto siguiente"
+                (click)="scrollCarousel('next')"
+            >
+                <span aria-hidden="true">
+                    <app-icon name="chevron-right" size="lg"></app-icon>
+                </span>
+            </button>
         }
     </div>
 </section>

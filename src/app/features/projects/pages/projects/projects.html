@@ -1,9 +1,39 @@
 <app-hero
-    imageSrc="/images/projects/hero-projects.png"
+    imageSrc="/images/projects/hero-projects.webp"
     imageAlt="Portfolio project preview"
-    eyebrow="MY WORK"
-    heading="Projects that solve real problems"
-    description="A selection of web applications and digital solutions built with Angular, TypeScript and
-        modern technologies."
+    [eyebrow]="'projects.hero.eyebrow' | translate"
+    [heading]="'projects.hero.heading' | translate"
+    [description]="'projects.hero.description' | translate"
 >
 </app-hero>
+@switch (status()) {
+    @case ('loading') {
+        <span class="projects__status" role="status">
+            {{ 'states.loading' | translate}}
+        </span>
+    }
+    @case ('error') {
+        <span class="projects__status" role="alert">
+            {{ 'states.error' | translate}}
+        </span>
+    }
+    @case ('empty') {
+        <span class="projects__status">
+            {{ 'states.empty' | translate}}
+        </span>
+    }
+    @case ('success') {
+        <app-projects-section
+            [title]="'projects.featuredProjects.title' | translate"
+            [projects]="projects()"
+            layout="carousel"
+        >
+        </app-projects-section>
+    }
+}
+<app-other-projects
+    [title]="'projects.otherProjects.title' | translate"
+    [heading]="'projects.otherProjects.heading' | translate"
+    [description]="'projects.otherProjects.description' | translate"
+>
+</app-other-projects>

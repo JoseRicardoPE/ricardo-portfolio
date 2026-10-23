@@ -5,7 +5,11 @@
     <h2 class="professional-profile__title">
         {{ title() }}
     </h2>
-    <p class="professional-profile__description">
-        {{ description() }}
-    </p>
+    <div class="professional-profile__description">
+        @for (paragraph of paragraphs(); track $index) {
+            <p class="professional-profile__paragraph">
+                {{ paragraph }}
+            </p>    
+        }
+    </div>
 </section>

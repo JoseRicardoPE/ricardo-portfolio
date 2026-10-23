@@ -11,4 +11,5 @@ type tagColor = 'neutral' | 'green' | 'blue' | 'orange';
 })
 export class Tag {
   readonly color = input<tagColor>('neutral');
+  readonly size = input<'responsive' | 'sm'>('responsive');
 }

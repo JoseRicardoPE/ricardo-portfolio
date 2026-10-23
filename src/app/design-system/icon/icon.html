@@ -46,18 +46,31 @@
             </lucide-icon>
         }
         @case ('close') {
-            <lucide-angular
+            <lucide-icon
                 [img]="CloseIcon"
                 [size]="iconSize()"
             >
-            </lucide-angular>
+            </lucide-icon>
         }
         @case ('open') {
-            <lucide-angular
+            <lucide-icon
                 [img]="MenuIcon"
                 [size]="iconSize()"
             >
-            </lucide-angular>
+            </lucide-icon>
+        }
+        @case ('chevron-left') {
+            <lucide-icon
+                [img]="ChevronLeft"
+                [size]="iconSize()"
+            />
+        }
+
+        @case ('chevron-right') {
+            <lucide-icon
+                [img]="ChevronRight"
+                [size]="iconSize()"
+            />
         }
     }
 </span>

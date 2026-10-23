@@ -1,9 +1,7 @@
 import { Component, ChangeDetectionStrategy, input, computed } from '@angular/core';
-import { LucideAngularModule, Github, Linkedin, Mail, MessageCircle, Sun, Moon, X, Menu } from 'lucide-angular';
-
-export type IconName = 'email' | 'linkedin' | 'github' | 'whatsapp' | 'sun' | 'moon' | 'close' | 'open';
-export type IconSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
-
+import { LucideAngularModule, Github, Linkedin, Mail, MessageCircle, Sun, Moon, X, Menu, ChevronLeft, ChevronRight } from 'lucide-angular';
+import { IconSize } from './models/icon-size.model';
+import { IconName } from './models/icon-name.model';
 @Component({
   selector: 'app-icon',
   imports: [LucideAngularModule],
@@ -22,6 +20,8 @@ export class Icon {
   readonly MoonIcon = Moon;
   readonly CloseIcon = X;
   readonly MenuIcon = Menu;
+  readonly ChevronLeft = ChevronLeft;
+  readonly ChevronRight = ChevronRight;
 
   readonly iconSize = computed(() => {
     const sizes: Record<IconSize, number> = {

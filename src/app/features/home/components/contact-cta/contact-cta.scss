@@ -20,8 +20,8 @@
 
 .contact-cta__message {
     @include ds.typography(ds.$font-family-body,
-        ds.$font-size-sm,
-        ds.$font-weight-regular,
+        ds.$font-size-lg,
+        ds.$font-weight-semibold,
     );
     color: var(--color-text-secondary);
     text-align: center;
@@ -36,6 +36,6 @@
         font-size: ds.$font-size-5xl;
     }
     .contact-cta__message {
-        font-size: ds.$font-size-md;
+        font-size: ds.$font-size-xl;
     }
 }

@@ -1,0 +1,24 @@
+@use '../../../../../styles/abstracts' as ds;
+
+.projects__status {
+    @include ds.typography(
+        ds.$font-family-body,
+        ds.$font-size-md,
+        ds.$font-weight-regular,
+        ds.$line-height-relaxed
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: ds.calculateRem(1200px);
+    margin-inline: auto;
+    padding: ds.$grid-margin-vertical-mobile ds.$grid-margin-horizontal-mobile;
+    color: var(--color-text-secondary);
+}
+
+@include ds.desktop {
+    .projects__status {
+        padding: ds.$grid-margin-vertical-desktop-md ds.$grid-margin-horizontal-desktop;
+    }
+}

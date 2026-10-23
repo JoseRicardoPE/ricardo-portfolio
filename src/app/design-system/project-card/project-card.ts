@@ -18,4 +18,5 @@ export class ProjectCard {
   readonly description = input.required<string>();
   readonly technologies = input.required<readonly string[]>();
   readonly projectUrl = input.required<string>();
+  readonly shadow = input<boolean>(true);
 }

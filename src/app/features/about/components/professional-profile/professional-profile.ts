@@ -9,5 +9,5 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 })
 export class ProfessionalProfile {
   readonly title = input.required<string>();
-  readonly description = input.required<string>();
+  readonly paragraphs = input.required<string[]>();
 }

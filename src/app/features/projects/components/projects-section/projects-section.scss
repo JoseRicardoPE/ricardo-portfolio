@@ -18,6 +18,11 @@
     text-align: center;
 }
 
+.projects-section__carousel-wrapper {
+    width: 100%;
+    position: relative;
+}
+
 .projects-section__grid {
     display: flex;
     flex-direction: column;
@@ -26,11 +31,94 @@
     gap: ds.$grid-gutter-mobile-lg;
 }
 
-@include ds.desktop {
-    .projects-section__grid {
-        flex-direction: row;
+.projects-section__grid--carousel {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    max-width: ds.calculateRem(778px);
+    width: 100%;
+    padding: ds.$space-4 0;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
     }
 
+    app-project-card {
+        flex: 0 0 100%;
+        min-width: 0;
+        scroll-snap-align: start;
+        background-color: transparent;
+    }
+}
+
+.projects-section__control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    width: ds.$space-12;
+    height: ds.$space-12;
+    color: var(--color-text-primary);
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: ds.$radius-full;
+    border: ds.calculateRem(1px) solid var(--color-border-default);
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity ds.$motion-base ds.$ease-standard;
+
+    &--previous {
+        left: ds.$space-2;
+    }
+
+    &--next {
+        right: ds.$space-2;
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &:focus-visible {
+        outline: ds.$focus-width solid var(--color-border-focus);
+        outline-offset: ds.$focus-offset;
+    }
+}
+
+// Solo dispositivos con mouse y hover real
+@media (hover: hover) and (pointer: fine) {
+    .projects-section__control {
+        opacity: 0;
+        box-shadow: var(--shadow-md);
+        pointer-events: none;
+    }
+
+    .projects-section__carousel-wrapper--active {
+
+        &:hover .projects-section__control,
+        &:focus-within .projects-section__control {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
+
+
+@include ds.tablet {
+    .projects-section__grid--carousel app-project-card {
+        flex-basis: calc((100% - #{ds.$grid-gutter-mobile-lg}) / 2);
+    }
+}
+
+@include ds.desktop {
     .projects-section {
         gap: ds.$grid-gutter-desktop-md;
         padding: ds.$grid-margin-vertical-desktop-md ds.$grid-margin-horizontal-desktop;
@@ -38,5 +126,28 @@
 
     .projects-section__title {
         font-size: ds.$font-size-5xl;
+    }
+
+    .projects-section__carousel-wrapper {
+        width: unset;
+    }
+
+    .projects-section__grid {
+        flex-direction: row;
+    }
+
+    .projects-section__grid:not(.projects-section__grid--carousel) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .projects-section__grid--carousel {
+        gap: ds.$grid-gutter-desktop-md;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .projects-section__grid--carousel {
+        scroll-behavior: smooth;
     }
 }

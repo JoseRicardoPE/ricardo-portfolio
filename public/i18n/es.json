@@ -1,4 +1,9 @@
 {
+  "states": {
+    "loading": "Cargando proyectos...",
+    "error": "No fue posible cargar los proyectos.",
+    "empty": "Aún no hay proyectos disponibles."
+  },
   "navigation": {
     "home": "Inicio",
     "about": "Sobre Mí",
@@ -34,7 +39,7 @@
     }
   },
   "common": {
-    "viewProjects": "Ver projectos",
+    "viewProjects": "Ver projecto",
     "github": "GitHub"
   },
   "about": {
@@ -52,7 +57,13 @@
     },
     "profile": {
       "title": "PERFIL PROFESIONAL",
-      "description": "Ingeniero Frontend con 4 años de experiencia desarrollando aplicaciones web modernas con Angular, TypeScript, HTML5 y SCSS. Especializado en transformar diseños de Figma en interfaces responsivas y Pixel Perfect, trabajando con componentes reutilizables, Design Systems y arquitecturas frontend escalables. Además, continúo fortaleciendo mis conocimientos en backend con Node.js, Express y MongoDB para ampliar mi comprensión del desarrollo de aplicaciones Full Stack."
+      "description": [
+        "Soy Frontend Engineer con 4 años de experiencia en el desarrollo de aplicaciones web modernas, responsivas y escalables, especializado en Angular, TypeScript, HTML5 y SCSS.",
+        "He participado en el desarrollo y mantenimiento de aplicaciones de alto tráfico, transformando diseños de Figma en interfaces Pixel Perfect, implementando Design Systems y construyendo componentes reutilizables que garantizan consistencia visual, mantenibilidad y escalabilidad.",
+        "Cuento con experiencia colaborando con equipos de UX/UI y desarrollo bajo metodologías ágiles como SCRUM, aplicando buenas prácticas de arquitectura frontend, calidad de código y resolución de incidencias para mejorar la experiencia del usuario.",
+        "He ampliado mis habilidades hacia el desarrollo Full Stack, trabajando en proyectos personales con Node.js, Express, MongoDB, Mongoose y APIs REST. Entre ellos, he desarrollado y desplegado una aplicación Full Stack con Angular 21, integrando una API REST, MongoDB Atlas y configuraciones para entornos de producción. Me apasiona construir soluciones digitales de calidad, con código limpio, reutilizable y mantenible.",
+        "Actualmente continúo fortaleciendo mis conocimientos en desarrollo backend, complementando mi especialización en Angular y ampliando progresivamente mis capacidades como desarrollador Full Stack."
+      ]
     },
     "technologies": {
       "title": "TECNOLOGÍAS",
@@ -62,6 +73,23 @@
         "tools": "Herramientas",
         "practices": "Prácticas"
       }
+    }
+  },
+  "projects": {
+    "hero": {
+      "eyebrow": "MI TRABAJO",
+      "heading": "Proyectos que resuelven problemas reales.",
+      "description": "Una selección de aplicaciones web y soluciones digitales desarrolladas con Angular, TypeScript y tecnologías modernas."
+    },
+    "featuredProjects": {
+      "title": "PROYECTOS"
+    },
+    "otherProjects": {
+      "title": "OTROS PROYECTOS",
+      "heading": "Más proyectos próximamente",
+      "description": "Trabajando constantemente en nuevas ideas y contribuciones a proyectos de código abierto.",
+
+      "imageAlt": "Ilustración de una ventana de código en construcción con un engranaje y una barrera de seguridad"
     }
   }
 }
