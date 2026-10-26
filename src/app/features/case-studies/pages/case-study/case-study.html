@@ -1,1 +1,49 @@
-<p>case-study works!</p>
+<section class="case-study">
+    @let currentState = state();
+    @switch (currentState.status) {
+        @case ('loading') {
+            <span>Loading case study...</span>
+        }
+        @case ('success') {
+            <app-hero
+                [imageSrc]="currentState.data.project.thumbnail"
+                [imageAlt]="currentState.data.project.title"
+                [eyebrow]="'caseStudy.hero.eyebrow' | translate"
+                [heading]="currentState.data.project.title"
+                [description]="currentState.data.project.shortDescription[language()]"
+            >
+                @for (technology of currentState.data.project.technologies; track technology._id) {
+                    <app-tag hero-technologies>
+                        {{ technology.name }}
+                    </app-tag>
+                }
+
+                <app-button-link
+                    hero-actions
+                    [href]="currentState.data.project.liveUrl"
+                    [fullWidth]="true"
+                    [external]="true"
+                >
+                    {{ 'common.viewProjects' | translate }}
+                </app-button-link>
+                <app-button-link
+                    hero-actions
+                    [href]="currentState.data.project.repositoryUrl"
+                    [fullWidth]="true"
+                    variant="secondary"
+                    [external]="true"
+                >
+                    {{ 'common.github' | translate }}
+                </app-button-link>
+            </app-hero>
+            @if (currentState.data; as caseStudy) {
+                <app-project-overview 
+                    [caseStudy]="caseStudy"
+                ></app-project-overview>
+            }
+        }
+        @case ('error') {
+            <span>Unable to load case study.</span>
+        }
+    }
+</section>
