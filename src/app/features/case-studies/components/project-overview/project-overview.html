@@ -1,0 +1,33 @@
+<div
+    class="project-overview"
+    aria-labelledby="project-overview-title"
+>
+    <h2
+        id="project-overview-title"
+        class="project-overview__title"
+    >
+        {{ 'caseStudy.overview.title' | translate }}
+    </h2>
+    <div class="project-overview__content">
+        @for (section of sectionsOverview; track section.key) {
+            <div class="project-overview__section">
+                <h3 class="project-overview__section-title">
+                    {{ section.label | translate }}
+                </h3>
+                <p class="project-overview__section-description">
+                    {{ caseStudy()[section.key][language()] }}
+                </p>
+            </div>
+        }
+    </div>
+    <div class="project-overview__navigation">
+        <app-button-link
+            hero-actions
+            href="/projects"
+            [fullWidth]="true"
+            variant="secondary"
+        >
+            {{ 'caseStudy.controls.back' | translate }}
+        </app-button-link>
+    </div>
+</div>

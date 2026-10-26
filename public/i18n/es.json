@@ -39,7 +39,7 @@
     }
   },
   "common": {
-    "viewProjects": "Ver projecto",
+    "viewProjects": "Ver proyecto",
     "github": "GitHub"
   },
   "about": {
@@ -90,6 +90,25 @@
       "description": "Trabajando constantemente en nuevas ideas y contribuciones a proyectos de código abierto.",
 
       "imageAlt": "Ilustración de una ventana de código en construcción con un engranaje y una barrera de seguridad"
+    }
+  },
+  "caseStudy": {
+    "hero": {
+      "eyebrow": "CASO DE ESTUDIO"
+    },
+    "overview": {
+      "title": "DESCRIPCIÓN DEL PROYECTO",
+      "context": "Contexto",
+      "role": "Rol",
+      "goal": "Objetivo",
+      "architecture": "Arquitectura",
+      "challenges": "Desafíos",
+      "solution": "Solución",
+      "results": "Resultados"
+    },
+    "controls": {
+      "back": "Regresar a proyectos",
+      "next": "Siguiente proyecto"
     }
   }
 }

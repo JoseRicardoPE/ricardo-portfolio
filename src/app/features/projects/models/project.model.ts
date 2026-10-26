@@ -1,11 +1,10 @@
+import { LocalizedText } from "../../../shared/models/localized-text.model";
+
 export interface Project {
     _id: string,
     title: string,
     slug: string,
-    shortDescription: {
-        es: string;
-        en: string;
-    },
+    shortDescription: LocalizedText,
     category: string,
     technologies: readonly {
         _id: string;

@@ -61,7 +61,9 @@
 }
 
 .hero__technologies {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: ds.$space-3;
 }
 
 .hero__actions {
@@ -88,6 +90,7 @@
     }
 
     .hero__content {
+        gap: ds.$grid-gutter-desktop-sm;
         order: 1;
     }
 
@@ -101,7 +104,6 @@
 
     .hero__actions {
         flex-direction: row;
-        gap: ds.$grid-gutter-desktop-sm;
     }
 }
 

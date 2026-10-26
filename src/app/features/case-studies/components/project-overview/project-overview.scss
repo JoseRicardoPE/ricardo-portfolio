@@ -1,0 +1,77 @@
+@use '../../../../../styles/abstracts' as ds;
+
+.project-overview {
+    display: flex;
+    flex-direction: column;
+    gap: ds.$grid-gutter-mobile-lg;
+    padding: ds.$grid-margin-vertical-mobile ds.$grid-margin-horizontal-mobile;
+}
+
+.project-overview__title {
+    @include ds.typography(ds.$font-family-display,
+        ds.$font-size-3xl,
+        ds.$font-weight-semibold,
+    );
+    color: var(--color-text-primary);
+    text-align: center;
+}
+
+.project-overview__content {
+    display: flex;
+    flex-direction: column;
+    gap: ds.$space-7;
+}
+
+.project-overview__section {
+    display: flex;
+    flex-direction: column;
+    gap: ds.$space-1;
+}
+
+.project-overview__section-title {
+    @include ds.typography(ds.$font-family-display,
+        ds.$font-size-xl,
+        ds.$font-weight-bold,
+    );
+    color: var(--color-text-primary);
+}
+
+.project-overview__section-description {
+    @include ds.typography(ds.$font-family-body,
+        ds.$font-size-md,
+        ds.$font-weight-regular,
+    );
+    color: var(--color-text-secondary);
+}
+
+.project-overview__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: ds.$grid-gutter-mobile-sm;
+}
+
+@include ds.desktop {
+    .project-overview {
+        gap: ds.$grid-gutter-desktop-md;
+        padding: ds.$grid-margin-vertical-desktop-md ds.$grid-margin-horizontal-desktop;
+    }
+
+    .project-overview__title {
+        font-size: ds.$font-size-5xl;
+    }
+
+    .project-overview__section-title {
+        font-size: ds.$font-size-3xl;
+    }
+
+    .project-overview__section-description {
+        font-size: ds.$font-size-lg;
+    }
+
+    .project-overview__navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: unset;
+    }
+}

@@ -91,5 +91,24 @@
 
       "imageAlt": "Illustration of a code window under construction with a gear and a safety barrier"
     }
+  },
+  "caseStudy": {
+    "hero": {
+      "eyebrow": "CASE STUDY"
+    },
+    "overview": {
+      "title": "PROJECT OVERVIEW",
+      "context": "Context",
+      "role": "Role",
+      "goal": "Goal",
+      "architecture": "Architecture",
+      "challenges": "Challenges",
+      "solution": "Solution",
+      "results": "Results"
+    },
+    "controls": {
+      "back": "Back to Projects",
+      "next": "Next Project"
+    }
   }
 }
