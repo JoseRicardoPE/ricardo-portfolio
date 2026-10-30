@@ -6,7 +6,7 @@
         ds.$font-size-sm,
         ds.$font-weight-bold,
     );
-    @include ds.focus-visible;
+    @include ds.focus-visible();
     position: relative;
     display: inline-flex;
     align-items: center;

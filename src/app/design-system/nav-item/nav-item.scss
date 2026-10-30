@@ -33,8 +33,7 @@
         transition: transform ds.$motion-slow ds.$ease-standard;
     }
 
-    &:hover::after,
-    &--active::after {
+    &:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
     }

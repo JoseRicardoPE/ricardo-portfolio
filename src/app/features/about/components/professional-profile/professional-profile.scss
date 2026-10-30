@@ -1,5 +1,16 @@
 @use '../../../../../styles/abstracts' as ds;
 
+@keyframes blink {
+
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
 .professional-profile {
     display: flex;
     flex-direction: column;
@@ -26,6 +37,13 @@
     color: var(--color-text-secondary);
 }
 
+.professional-profile__paragraph--typing::after {
+    content: '|';
+    font-weight: ds.$font-weight-regular;
+    margin-left: ds.calculateRem(2px);
+    animation: blink 0.7s infinite;
+}
+
 @include ds.desktop {
     .professional-profile {
         gap: ds.$grid-gutter-desktop-md;
@@ -38,5 +56,11 @@
 
     .professional-profile__description {
         font-size: ds.$font-size-xl;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .professional-profile__paragraph--typing::after {
+        animation: none;
     }
 }

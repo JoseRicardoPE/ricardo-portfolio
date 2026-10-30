@@ -1,16 +1,23 @@
-<article class="contact-card">
-    <div class="contact-card__icon" aria-hidden="true">
-        <app-icon 
-            [name]="type()"
-            size="2xl"
+@for (option of options; track option.id) {
+    <article class="contact-card">
+        <div class="contact-card__icon" aria-hidden="true">
+            <app-icon 
+                [name]="option.icon"
+                size="2xl"
+                >
+            </app-icon>
+        </div>
+        <div class="contact-card__content">
+            <h3 class="contact-card__title">{{ option.title| translate}}</h3>
+            <p class="contact-card__description">{{ option.description | translate}}</p>
+        </div>
+        <div class="contact-card__action">
+            <app-text-link 
+                [href]="option.href"
+                [ariaLabel]="option.ariaLabel | translate"
             >
-        </app-icon>
-    </div>
-    <div class="contact-card__content">
-        <h3 class="contact-card__title">{{ title() }}</h3>
-        <p class="contact-card__description">{{ description() }}</p>
-    </div>
-    <div class="contact-card__action">
-        <app-text-link [href]="href()">{{ actionLabel() }}</app-text-link>
-    </div>
-</article>
+                {{ option.actionLabel | translate}}
+            </app-text-link>
+        </div>
+    </article>
+}

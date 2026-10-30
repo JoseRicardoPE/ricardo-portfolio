@@ -7,9 +7,17 @@
     </h2>
     <div class="professional-profile__description">
         @for (paragraph of paragraphs(); track $index) {
-            <p class="professional-profile__paragraph">
-                {{ paragraph }}
-            </p>    
+            @if ($index <= activeParagraph()) {
+                <p
+                    class="professional-profile__paragraph"
+                    [class.professional-profile__paragraph--typing]="$index === activeParagraph()"
+                    [appTypewriter]="paragraph"
+                    [speed]="50"
+                    (typingCompleted)="onTypingCompleted($index)"
+                >
+                    {{ paragraph }}
+                </p>
+            }
         }
     </div>
 </section>

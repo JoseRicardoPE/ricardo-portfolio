@@ -5,4 +5,6 @@
 @use 'themes/dark';
 @use 'themes/light';
 
+@use './components/toast';
+
 @use 'utilities/utilities';

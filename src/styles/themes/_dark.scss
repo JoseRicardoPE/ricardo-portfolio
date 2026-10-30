@@ -71,15 +71,28 @@
     --color-icon-primary-hover: #{c.$brand-300};
     --color-icon-primary-disabled: #{c.$neutral-500};
 
-    // Shadows
+    // ========================================
+    // Shadows — Dark Theme
+    // ========================================
     --shadow-none: none;
+    --shadow-header: #{vars.$shadow-header};
+    --shadow-project-card: #{vars.$shadow-project-card-dark};
+    --shadow-project-card-hover: #{vars.$shadow-project-card-hover-dark};
+    --shadow-contact-card: #{vars.$shadow-contact-card-dark};
+    --shadow-contact-card-hover: #{vars.$shadow-contact-card-hover-dark};
+    --shadow-button: #{vars.$shadow-button-dark};
+    --shadow-button-press-primary: #{vars.$shadow-button-press-primary-dark};
+    --shadow-button-press-secondary: #{vars.$shadow-button-press-secondary-dark};
+    --shadow-button-carousel: #{vars.$shadow-button-carousel-dark};
+    --shadow-button-carousel-press: #{vars.$shadow-button-carousel-press-dark};
 
-    --shadow-sm: #{vars.$shadow-sm-x} #{vars.$shadow-sm-y} #{vars.$shadow-sm-blur}
-        #{vars.$shadow-sm-spread} rgb(56 189 248 / 8%);
+    // Toast
+    --color-toast-background: #{c.$neutral-900};
+    --color-toast-text: #{c.$neutral-0};
+    --color-toast-border: #{c.$neutral-700};
 
-    --shadow-md: #{vars.$shadow-md-x} #{vars.$shadow-md-y} #{vars.$shadow-md-blur}
-        #{vars.$shadow-md-spread} rgb(56 189 248 / 12%);
-
-    --shadow-lg: #{vars.$shadow-lg-x} #{vars.$shadow-lg-y} #{vars.$shadow-lg-blur}
-        #{vars.$shadow-lg-spread} rgb(56 189 248 / 16%);
+    --color-toast-success: #{c.$brand-400};
+    --color-toast-error: #{c.$error-400};
+    --color-toast-info: #{c.$blue-400};
+    --color-toast-warning: #{c.$orange-500};
 }

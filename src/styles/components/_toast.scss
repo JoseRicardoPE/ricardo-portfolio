@@ -1,0 +1,54 @@
+@use '../abstracts' as ds;
+
+.toast-container {
+  .ngx-toastr {
+    font-family: ds.$font-family-body;
+    background-color: var(--color-background-primary);
+    color: var(--color-toast-text);
+    border: ds.$border-1 solid var(--color-toast-border);
+    border-radius: ds.$radius-md;
+    // box-shadow: var(--shadow-md);
+    padding: ds.$space-4 ds.$space-10 ds.$space-4 ds.$space-12;
+    background-size: ds.calculateRem(20px);
+    font-size: ds.$font-size-sm;
+    line-height: ds.$line-height-relaxed;
+  }
+
+  .toast-title {
+    font-weight: ds.$font-weight-semibold;
+  }
+
+  .toast-message {
+    color: var(--color-toast-text);
+  }
+
+  .toast-success {
+    background-color: var(--color-toast-success);
+  }
+
+  .toast-error {
+    background-color: var(--color-toast-error);
+  }
+
+  .toast-info {
+    background-color: var(--color-toast-info);
+  }
+
+  .toast-warning {
+    background-color: var(--color-toast-warning);
+  }
+
+  .toast-close-button {
+    @include ds.focus-visible;
+    color: var(--color-toast-text);
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .toast-progress {
+    opacity: 0.8;
+  }
+}

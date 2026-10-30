@@ -9,12 +9,26 @@
     background-color: var(--color-background-primary);
     border: ds.$border-1 solid var(--color-border-default);
     border-radius: ds.$radius-lg;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-project-card);
     overflow: hidden;
-}
+    transition:
+        box-shadow ds.$motion-base ds.$ease-standard,
+        transform ds.$motion-base ds.$ease-standard;
 
-.project-card--no-shadow {
-    box-shadow: none;
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-project-card-hover);
+    }
+
+    &.project-card--no-shadow {
+        box-shadow: none;
+    }
+
+    &.project-card--no-shadow:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
 }
 
 .project-card__image-container {
@@ -45,6 +59,7 @@
     justify-content: space-between;
     height: 100%;
 }
+
 .project-card__info-wrapper {
     display: flex;
     flex-direction: column;
@@ -52,8 +67,7 @@
 }
 
 .project-card__category {
-    @include ds.typography(
-        ds.$font-family-body,
+    @include ds.typography(ds.$font-family-body,
         ds.$font-size-xs,
         ds.$font-weight-medium,
     );
@@ -61,8 +75,7 @@
 }
 
 .project-card__title {
-    @include ds.typography(
-        ds.$font-family-body,
+    @include ds.typography(ds.$font-family-body,
         ds.$font-size-xl,
         ds.$font-weight-semibold,
     );
@@ -70,12 +83,10 @@
 }
 
 .project-card__description {
-    @include ds.typography(
-        ds.$font-family-body,
+    @include ds.typography(ds.$font-family-body,
         ds.$font-size-sm,
         ds.$font-weight-regular,
-        ds.$line-height-relaxed
-    );
+        ds.$line-height-relaxed );
     color: var(--color-text-secondary);
 }
 
