@@ -58,11 +58,8 @@
     "profile": {
       "title": "PROFESSIONAL PROFILE",
       "description": [
-        "I'm a Frontend Engineer with 4 years of experience developing modern, responsive, and scalable web applications, specializing in Angular, TypeScript, HTML5, and SCSS.",
-        "I have contributed to the development and maintenance of high-traffic applications, transforming Figma designs into pixel-perfect interfaces, implementing Design Systems, and building reusable components that ensure visual consistency, maintainability, and scalability.",
-        "I have experience collaborating closely with UX/UI and development teams in agile environments using SCRUM, applying frontend architecture best practices, clean code principles, and UI/UX issue resolution to enhance the overall user experience.",
-        "I have expanded my skills into Full Stack Development through personal projects using Node.js, Express, MongoDB, Mongoose, and REST APIs. These include developing and deploying a Full Stack application with Angular 21, integrating a REST API, MongoDB Atlas, and production environment configurations. I'm passionate about building high-quality digital solutions with clean, reusable, and maintainable code.",
-        "I'm currently strengthening my backend development skills, complementing my Angular expertise and progressively expanding my capabilities as a Full Stack Developer."
+        "I'm a Frontend Engineer with 4 years of experience developing modern, responsive, and scalable web applications, specializing in Angular, TypeScript, HTML5, and SCSS. I have contributed to the development and maintenance of high-traffic applications, transforming Figma designs into pixel-perfect interfaces, implementing Design Systems, and building reusable components that ensure visual consistency, maintainability, and scalability. I have experience collaborating closely with UX/UI and development teams in agile environments using SCRUM, applying frontend architecture best practices, clean code principles, and UI/UX issue resolution to enhance the overall user experience.",
+        "I have expanded my skills into Full Stack Development through personal projects using Node.js, Express, MongoDB, Mongoose, and REST APIs. These include developing and deploying a Full Stack application with Angular 21, integrating a REST API, MongoDB Atlas, and production environment configurations. I'm passionate about building high-quality digital solutions with clean, reusable, and maintainable code. I'm currently strengthening my backend development skills, complementing my Angular expertise and progressively expanding my capabilities as a Full Stack Developer."
       ]
     },
     "technologies": {
@@ -109,6 +106,107 @@
     "controls": {
       "back": "Back to Projects",
       "next": "Next Project"
+    }
+  },
+  "notifications": {
+    "test": {
+      "title": "Notifications",
+      "success": "The notification system is working correctly."
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "GET IN TOUCH",
+      "heading": "Let's build something great together",
+      "description": "I'm always open to new opportunities, interesting projects or just a friendly chat about technology."
+    },
+    "options": {
+      "title": "CONTACT OPTIONS",
+      "email": {
+        "title": "Email",
+        "description": "ricardo1981.dev@gmail.com",
+        "action": "Send an Email",
+        "arialabel": "Send an email to Ricardo"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "description": "Let's connect",
+        "action": "Visit my profile",
+        "arialabel": "Visit Ricardo Pacheco's LinkedIn profile"
+      },
+      "github": {
+        "title": "GitHub",
+        "description": "Check my work",
+        "action": "Visit my profile",
+        "arialabel": "Visit Ricardo Pacheco's GitHub profile"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "description": "Let's chat",
+        "action": "Message me",
+        "arialabel": "Send Ricardo Pacheco a message on WhatsApp"
+      }
+    },
+    "form": {
+      "title": "Contact Form",
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name",
+        "errors": {
+          "required": "Name is required.",
+          "minlength": "Name must contain at least 2 characters.",
+          "maxlength": "Name cannot exceed 100 characters."
+        }
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@example.com",
+        "errors": {
+          "required": "Email is required.",
+          "invalid": "Enter a valid email address.",
+          "maxlength": "Email cannot exceed 254 characters."
+        }
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "How can I help you?",
+        "errors": {
+          "required": "Subject is required.",
+          "minlength": "Subject must contain at least 2 characters.",
+          "maxlength": "Subject cannot exceed 150 characters."
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Write your message here...",
+        "helper": "Maximum 2000 characters.",
+        "errors": {
+          "required": "Message is required.",
+          "minlength": "Message must contain at least 10 characters.",
+          "maxlength": "Message cannot exceed 2000 characters."
+        }
+      },
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "notifications": {
+        "success": "Your message has been sent successfully.",
+        "error": "Unable to send your message. Please try again.",
+        "rateLimit": "You have reached the message limit. Please try again in a few minutes."
+      }
+    }
+  },
+  "footer": {
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "linkedin": {
+      "arialabel": "Visit Ricardo Pacheco's LinkedIn profile"
+    },
+    "github": {
+      "arialabel": "Visit Ricardo Pacheco's GitHub profile"
     }
   }
 }

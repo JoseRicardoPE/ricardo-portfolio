@@ -10,6 +10,11 @@
     
     &:hover {
         background-color: var(--color-button-primary-background-hover);
+        box-shadow: var(--shadow-button-press-primary);
+    }
+
+    &:active {
+        box-shadow: var(--shadow-button-press-primary);
     }
 }
 
@@ -19,6 +24,11 @@
     &:hover {
         background-color: var(--color-button-secondary-background-hover);
         border-color: var(--color-button-secondary-border-hover);
+        box-shadow: var(--shadow-button-press-secondary);
+    }
+
+    &:active {
+        box-shadow: var(--shadow-button-press-secondary);
     }
 }
 

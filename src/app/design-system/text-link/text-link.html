@@ -4,6 +4,10 @@
     [attr.href]="disabled() ? null : href()"
     [attr.aria-disabled]="disabled() || null"
     [attr.tabindex]="disabled() ? -1 : null"
+    target="_blank"
+    [attr.target]="disabled() ? null : '_blank'"
+    [attr.rel]="disabled() ? null : 'noopener noreferrer'"
+    [attr.aria-label]="ariaLabel()"
 >
     <span class="text-link__label">
         <ng-content></ng-content>

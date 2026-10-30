@@ -13,6 +13,7 @@
     
     &:hover:not(:disabled) {
         background-color: var(--color-button-primary-background-hover);
+        box-shadow: var(--shadow-button-press-primary);
     }
     
     &:disabled {
@@ -27,6 +28,7 @@
     &:hover:not(:disabled) {
         background-color: var(--color-button-secondary-background-hover);
         border-color: var(--color-button-secondary-border-hover);
+        box-shadow: var(--shadow-button-press-secondary);
     }
     
     &:disabled {

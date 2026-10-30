@@ -3,6 +3,11 @@
 .header {
     width: 100%;
     background-color: var(--color-background-primary);
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: var(--shadow-header);
+    z-index: 100;
 }
 
 .header__top {
@@ -14,9 +19,11 @@
 }
 
 .header__brand {
+    @include ds.focus-visible();
     display: inline-flex;
     align-items: center;
     text-decoration: none;
+    border-radius: ds.calculateRem(2px);
 }
 
 .header__logo {
@@ -31,9 +38,9 @@
 }
 
 .header__menu-button {
-    @include ds.focus-visible;
+    @include ds.focus-visible();
     display: inline-flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     width: ds.$touch-target-min;
     height: ds.$touch-target-min;
@@ -41,6 +48,7 @@
     background-color: transparent;
     color: var(--color-interactive-primary);
     border: 0;
+    border-radius: ds.calculateRem(2px);
     cursor: pointer;
 }
 

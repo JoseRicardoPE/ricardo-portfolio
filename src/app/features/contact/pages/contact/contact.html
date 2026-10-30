@@ -1,8 +1,12 @@
 <app-hero
     imageSrc="/images/contact/hero-contact.png"
     imageAlt="Portfolio project preview"
-    eyebrow="GET IN TOUCH"
-    heading="Let's build something great together"
-    description="I'm always open to new opportunities, interesting projects or just a friendly chat about technology."
+    [eyebrow]="'contact.hero.eyebrow' | translate"
+    [heading]="'contact.hero.heading' | translate"
+    [description]="'contact.hero.description' | translate"
 >
 </app-hero>
+<app-contact-options
+    [title]="'contact.options.title' | translate"
+></app-contact-options>
+<app-contact-form></app-contact-form>

@@ -6,19 +6,19 @@
         </div>
         <nav class="footer__navigation">
             <app-nav-item
-                label="Home"
+                [label]="'footer.navigation.home' | translate"
                 route="/"
             ></app-nav-item>
             <app-nav-item
-                label="About"
+                [label]="'footer.navigation.about'| translate"
                 route="/about"
             ></app-nav-item>
             <app-nav-item
-                label="Projects"
+                [label]="'footer.navigation.projects'| translate"
                 route="/projects"
             ></app-nav-item>
             <app-nav-item
-                label="Contact"
+                [label]="'footer.navigation.contact'| translate"
                 route="/contact"
             ></app-nav-item>
         </nav>
@@ -28,7 +28,7 @@
                 href="https://github.com/JoseRicardoPE"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub de Ricardo Pacheco"
+                [attr.aria-label]="'footer.github.arialabel' | translate"
             >
                 <app-icon
                     name="github"
@@ -40,7 +40,7 @@
                 href="https://linkedin.com/in/ricardo-pacheco-escobar"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn de Ricardo Pacheco"
+                [attr.aria-label]="'footer.linkedin.arialabel' | translate"
             >
                 <app-icon
                     name="linkedin"

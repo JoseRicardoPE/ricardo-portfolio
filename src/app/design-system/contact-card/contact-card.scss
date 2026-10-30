@@ -5,16 +5,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: ds.$space-4;
+    gap: ds.$grid-gutter-mobile-sm;
     width: ds.calculateRem(280px);
     min-height: ds.calculateRem(214px);
-    padding: ds.$space-8;
+    padding: ds.$grid-margin-vertical-mobile;
     background-color: var(--color-background-primary);
     border: ds.$border-1 solid var(--color-border-default);
     border-radius: ds.$radius-lg;
-    box-shadow: var(--shadow-md);
-    text-align: center;
+    box-shadow: var(--shadow-contact-card);
     overflow: hidden;
+    transition: box-shadow ds.$motion-fast ds.$ease-enter;
+
+    &:hover {
+        box-shadow: var(--shadow-contact-card-hover);
+    }
 }
 
 .contact-card__icon {
@@ -29,6 +33,7 @@
 .contact-card__content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: ds.$space-1;
 }

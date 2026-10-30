@@ -43,8 +43,8 @@
     align-items: center;
     gap: ds.$space-2;
     --nav-item-font-size: #{ds.$font-size-sm};
-    --nav-item-font-weight: #{ds.$font-weight-regular};
-    --nav-item-color: var(--color-text-primary);
+    --nav-item-font-weight: #{ds.$font-weight-bold};
+    --nav-item-color: var(--color-interactive-primary);
 }
 
 .footer__social-links {
@@ -73,10 +73,14 @@
 }
 
 .footer__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     font-size: ds.$font-size-sm;
 }
 
-@include ds.tablet {
+@include ds.desktop {
     .footer {
         display: flex;
         gap: ds.$grid-gutter-tablet;
@@ -92,5 +96,11 @@
 
     .footer__brand {
         align-items: flex-start;
+        min-width: ds.calculateRem(138px);
+    }
+
+    .footer__social-links {
+        min-width: ds.calculateRem(138px);
+        justify-content: flex-end;
     }
 }

@@ -12,4 +12,5 @@ export class TextLink {
   readonly href = input.required<string>();
   readonly disabled = input(false);
   readonly arrowApRightIcon = ArrowUpRight;
+  readonly ariaLabel = input<string | null>(null);
 }

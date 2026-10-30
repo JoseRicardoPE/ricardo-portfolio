@@ -119,23 +119,65 @@ $radius-2xl: f.calculateRem(24px);
 $radius-full: f.calculateRem(9999px);
 
 // ========================================
-// Shadows
+// Shadows — Light Theme
 // ========================================
 
-$shadow-sm-x: 0;
-$shadow-sm-y: f.calculateRem(2px);
-$shadow-sm-blur: f.calculateRem(8px);
-$shadow-sm-spread: 0;
+// Header
+$shadow-header: 0 f.calculateRem(4px) f.calculateRem(5px) rgb(0 0 0 / 14%), 0 f.calculateRem(6px) f.calculateRem(10px) rgb(0 0 0 / 12%);
 
-$shadow-md-x: 0;
-$shadow-md-y: f.calculateRem(8px);
-$shadow-md-blur: f.calculateRem(24px);
-$shadow-md-spread: 0;
+// Project Cards
+$shadow-project-card-light: 0 f.calculateRem(1px) f.calculateRem(2px) rgb(0 0 0 / 10%);
+$shadow-project-card-hover-light: 0 f.calculateRem(8px) f.calculateRem(10px) rgb(0 0 0 / 14%),
+    0 f.calculateRem(10px) f.calculateRem(18px) rgb(0 0 0 / 12%);
 
-$shadow-lg-x: 0;
-$shadow-lg-y: f.calculateRem(16px);
-$shadow-lg-blur: f.calculateRem(40px);
-$shadow-lg-spread: 0;
+// Contact Cards
+$shadow-contact-card-light: 0 f.calculateRem(6px) f.calculateRem(10px) rgb(0 0 0 / 14%),
+    0 f.calculateRem(8px) f.calculateRem(14px) rgb(0 0 0 / 12%);
+$shadow-contact-card-hover-light: 0 f.calculateRem(1px) f.calculateRem(2px) rgb(0 0 0 / 8%);
+
+// Buttons
+$shadow-button-light: 0 f.calculateRem(4px) f.calculateRem(6px) rgb(0 0 0 / 15%);
+$shadow-button-press-primary-light: 0 f.calculateRem(2px) 0 rgb(0 0 0 / 20%);
+$shadow-button-press-secondary-light: 0 f.calculateRem(1px) f.calculateRem(2px) rgb(0 0 0 / 10%);
+
+// Carousel Buttons
+$shadow-button-carousel-light: 5px 5px 10px rgb(163 177 198 / 5%), -5px -5px 10px rgb(255 255 255 / 75%);
+$shadow-button-carousel-press-light: inset 6px 6px 12px rgb(163 177 198 / 6%), inset -6px -6px 12px rgb(255 255 255 / 8%);
+
+// ========================================
+// Shadows — Dark Theme
+// ========================================
+
+// Header
+$shadow-header: 0 f.calculateRem(4px) f.calculateRem(5px) rgb(0 0 0 / 14%), 0 f.calculateRem(6px) f.calculateRem(10px) rgb(0 0 0 / 12%);
+
+// Project Cards
+$shadow-project-card-dark: 0 f.calculateRem(4px) f.calculateRem(12px) rgb(0 5 20 / 65%),
+    0 0 f.calculateRem(8px) rgb(65 160 255 / 30%);
+$shadow-project-card-hover-dark: 0 f.calculateRem(12px) f.calculateRem(28px) rgb(0 5 20 / 75%),
+    0 f.calculateRem(16px) f.calculateRem(36px) rgb(0 15 45 / 55%),
+    0 0 f.calculateRem(22px) rgb(37 141 255 / 40%);
+
+// Contact Cards
+$shadow-contact-card-dark: 0 f.calculateRem(8px) f.calculateRem(20px) rgb(0 5 20 / 65%),
+    0 f.calculateRem(12px) f.calculateRem(28px) rgb(0 20 55 / 45%),
+    0 0 f.calculateRem(14px) rgb(37 141 255 / 28%);
+$shadow-contact-card-hover-dark: 0 f.calculateRem(4px) f.calculateRem(12px) rgb(0 5 20 / 55%),
+    0 0 f.calculateRem(22px) rgb(37 141 255 / 45%);
+
+// Buttons
+$shadow-button-dark: 0 f.calculateRem(5px) f.calculateRem(12px) rgb(0 5 20 / 65%),
+    0 0 f.calculateRem(10px) rgb(37 141 255 / 25%);
+$shadow-button-press-primary-dark: 0 f.calculateRem(2px) 0 rgb(0 5 20 / 65%),
+    0 0 f.calculateRem(14px) rgb(37 141 255 / 35%);
+$shadow-button-press-secondary-dark: 0 f.calculateRem(2px) f.calculateRem(5px) rgb(0 5 20 / 55%),
+    0 0 f.calculateRem(12px) rgb(37 141 255 / 28%);
+
+// Carousel Buttons
+$shadow-button-carousel-dark: f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(14px) rgb(0 5 20 / 75%),
+    f.calculateRem(-6px) f.calculateRem(-6px) f.calculateRem(14px) rgb(75 155 255 / 30%);
+$shadow-button-carousel-press-dark: inset f.calculateRem(6px) f.calculateRem(6px) f.calculateRem(14px) rgb(0 5 20 / 70%),
+    inset f.calculateRem(-6px) f.calculateRem(-6px) f.calculateRem(14px) rgb(75 155 255 / 25%);
 
 // ========================================
 // Iconography
@@ -161,6 +203,7 @@ $icon-stroke-width: 2px;
 // Duration
 $motion-fast: 150ms;
 $motion-base: 250ms;
+$motion-medium: 300ms;
 $motion-slow: 400ms;
 
 // Easing

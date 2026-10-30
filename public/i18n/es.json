@@ -58,11 +58,8 @@
     "profile": {
       "title": "PERFIL PROFESIONAL",
       "description": [
-        "Soy Frontend Engineer con 4 años de experiencia en el desarrollo de aplicaciones web modernas, responsivas y escalables, especializado en Angular, TypeScript, HTML5 y SCSS.",
-        "He participado en el desarrollo y mantenimiento de aplicaciones de alto tráfico, transformando diseños de Figma en interfaces Pixel Perfect, implementando Design Systems y construyendo componentes reutilizables que garantizan consistencia visual, mantenibilidad y escalabilidad.",
-        "Cuento con experiencia colaborando con equipos de UX/UI y desarrollo bajo metodologías ágiles como SCRUM, aplicando buenas prácticas de arquitectura frontend, calidad de código y resolución de incidencias para mejorar la experiencia del usuario.",
-        "He ampliado mis habilidades hacia el desarrollo Full Stack, trabajando en proyectos personales con Node.js, Express, MongoDB, Mongoose y APIs REST. Entre ellos, he desarrollado y desplegado una aplicación Full Stack con Angular 21, integrando una API REST, MongoDB Atlas y configuraciones para entornos de producción. Me apasiona construir soluciones digitales de calidad, con código limpio, reutilizable y mantenible.",
-        "Actualmente continúo fortaleciendo mis conocimientos en desarrollo backend, complementando mi especialización en Angular y ampliando progresivamente mis capacidades como desarrollador Full Stack."
+        "Soy Frontend Engineer con 4 años de experiencia en el desarrollo de aplicaciones web modernas, responsivas y escalables, especializado en Angular, TypeScript, HTML5 y SCSS.He participado en el desarrollo y mantenimiento de aplicaciones de alto tráfico, transformando diseños de Figma en interfaces Pixel Perfect, implementando Design Systems y construyendo componentes reutilizables que garantizan consistencia visual, mantenibilidad y escalabilidad. Cuento con experiencia colaborando con equipos de UX/UI y desarrollo bajo metodologías ágiles como SCRUM, aplicando buenas prácticas de arquitectura frontend, calidad de código y resolución de incidencias para mejorar la experiencia del usuario.",
+        "He ampliado mis habilidades hacia el desarrollo Full Stack, trabajando en proyectos personales con Node.js, Express, MongoDB, Mongoose y APIs REST. Entre ellos, he desarrollado y desplegado una aplicación Full Stack con Angular 21, integrando una API REST, MongoDB Atlas y configuraciones para entornos de producción. Me apasiona construir soluciones digitales de calidad, con código limpio, reutilizable y mantenible. Actualmente continúo fortaleciendo mis conocimientos en desarrollo backend, complementando mi especialización en Angular y ampliando progresivamente mis capacidades como desarrollador Full Stack."
       ]
     },
     "technologies": {
@@ -109,6 +106,107 @@
     "controls": {
       "back": "Regresar a proyectos",
       "next": "Siguiente proyecto"
+    }
+  },
+  "notifications": {
+    "test": {
+      "title": "Notificaciones",
+      "success": "El sistema de notificaciones funciona correctamente."
+    }
+  },
+  "contact": {
+    "hero": {
+      "eyebrow": "HABLEMOS",
+      "heading": "Construyamos algo increíble juntos",
+      "description": "Siempre estoy abierto a nuevas oportunidades, proyectos interesantes o simplemente a una buena conversación sobre tecnología."
+    },
+    "options": {
+      "title": "OPCIONES DE CONTACTO",
+      "email": {
+        "title": "Correo electrónico",
+        "description": "ricardo1981.dev@gmail.com",
+        "action": "Enviar un correo",
+        "arialabel": "Enviar un correo electrónico a Ricardo"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "description": "Conectemos",
+        "action": "Visitar mi perfil",
+        "arialabel": "Visitar el perfil de Ricardo Pacheco en LinkedIn"
+      },
+      "github": {
+        "title": "GitHub",
+        "description": "Conoce mi trabajo",
+        "action": "Visitar mi perfil",
+        "arialabel": "Visitar el perfil de Ricardo Pacheco en GitHub"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "description": "Hablemos",
+        "action": "Enviarme un mensaje",
+        "arialabel": "Enviar un mensaje a Ricardo Pacheco por WhatsApp"
+      }
+    },
+    "form": {
+      "title": "Formulario de contacto",
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Tu nombre",
+        "errors": {
+          "required": "El nombre es obligatorio.",
+          "minlength": "El nombre debe tener al menos 2 caracteres.",
+          "maxlength": "El nombre no puede superar los 100 caracteres."
+        }
+      },
+      "email": {
+        "label": "Correo electrónico",
+        "placeholder": "tu@ejemplo.com",
+        "errors": {
+          "required": "El correo electrónico es obligatorio.",
+          "invalid": "Ingresa un correo electrónico válido.",
+          "maxlength": "El correo electrónico no puede superar los 254 caracteres."
+        }
+      },
+      "subject": {
+        "label": "Asunto",
+        "placeholder": "¿En qué puedo ayudarte?",
+        "errors": {
+          "required": "El asunto es obligatorio.",
+          "minlength": "El asunto debe tener al menos 2 caracteres.",
+          "maxlength": "El asunto no puede superar los 150 caracteres."
+        }
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Escribe tu mensaje aquí...",
+        "helper": "Máximo 2000 caracteres.",
+        "errors": {
+          "required": "El mensaje es obligatorio.",
+          "minlength": "El mensaje debe tener al menos 10 caracteres.",
+          "maxlength": "El mensaje no puede superar los 2000 caracteres."
+        }
+      },
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando...",
+      "notifications": {
+        "success": "Tu mensaje se ha enviado correctamente.",
+        "error": "No fue posible enviar tu mensaje. Inténtalo nuevamente.",
+        "rateLimit": "Has alcanzado el límite de mensajes. Inténtalo nuevamente en unos minutos."
+      }
+    }
+  },
+  "footer": {
+    "navigation": {
+      "home": "Inicio",
+      "about": "Sobre Mí",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "linkedin": {
+      "arialabel": "Visitar el perfil de Ricardo Pacheco en LinkedIn"
+    },
+    "github": {
+      "arialabel": "Visitar el perfil de Ricardo Pacheco en GitHub"
     }
   }
 }

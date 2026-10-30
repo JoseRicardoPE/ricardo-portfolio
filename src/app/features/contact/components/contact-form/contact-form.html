@@ -1,0 +1,217 @@
+<section
+    class="contact-form"
+    aria-labelledby="contact-form-title"
+>
+    <h2
+        id="contact-form-title"
+        class="contact-form__title"
+    >
+        {{ 'contact.form.title' | translate }}
+    </h2>
+    <form
+        class="contact-form__form"
+        [formGroup]="contactForm"
+        (ngSubmit)="onSubmit()"
+        novalidate
+    >
+        <div class="contact-form__first-row">
+            <!-- Name -->
+            <div class="contact-form__field contact-form__field--name">
+                <label
+                    for="contact-name"
+                    class="contact-form__label"
+                >
+                    {{ 'contact.form.name.label' | translate }}
+                </label>
+                <input
+                    id="contact-name"
+                    class="contact-form__input"
+                    type="text"
+                    formControlName="name"
+                    autocomplete="name"
+                    [placeholder]="'contact.form.name.placeholder' | translate"
+                    [class.contact-form__input--error]="
+                        contactForm.controls.name.invalid && contactForm.controls.name.touched
+                    "
+                    [attr.aria-invalid]="
+                        contactForm.controls.name.invalid && contactForm.controls.name.touched
+                    "
+                    [attr.aria-describedby]="
+                        contactForm.controls.name.invalid && contactForm.controls.name.touched
+                            ? 'contact-name-error'
+                            : null
+                    "
+                />
+                @if (contactForm.controls.name.invalid && contactForm.controls.name.touched) {
+                    <span
+                        id="contact-name-error"
+                        class="contact-form__error"
+                        aria-live="polite"
+                        role="alert"
+                    >
+                        @if (contactForm.controls.name.hasError('required')) {
+                            {{ 'contact.form.name.errors.required' | translate }}
+                        } @else if (contactForm.controls.name.hasError('minlength')) {
+                            {{ 'contact.form.name.errors.minlength' | translate }}
+                        } @else if (contactForm.controls.name.hasError('maxlength')) {
+                            {{ 'contact.form.name.errors.maxlength' | translate }}
+                        }
+                    </span>
+                }
+            </div>
+
+            <!-- Email -->
+            <div class="contact-form__field contact-form__field--email">
+                <label
+                    for="contact-email"
+                    class="contact-form__label"
+                >
+                    {{ 'contact.form.email.label' | translate }}
+                </label>
+                <input
+                    id="contact-email"
+                    class="contact-form__input"
+                    type="email"
+                    formControlName="email"
+                    autocomplete="email"
+                    [placeholder]="'contact.form.email.placeholder' | translate"
+                    [class.contact-form__input--error]="
+                        contactForm.controls.email.invalid && contactForm.controls.email.touched
+                    "
+                    [attr.aria-invalid]="
+                        contactForm.controls.email.invalid && contactForm.controls.email.touched
+                    "
+                    [attr.aria-describedby]="
+                        contactForm.controls.email.invalid && contactForm.controls.email.touched
+                            ? 'contact-email-error'
+                            : null
+                    "
+                />
+                @if (contactForm.controls.email.invalid && contactForm.controls.email.touched) {
+                    <span
+                        id="contact-email-error"
+                        class="contact-form__error"
+                        aria-live="polite"
+                        role="alert"
+                    >
+                        @if (contactForm.controls.email.hasError('required')) {
+                            {{ 'contact.form.email.errors.required' | translate }}
+                        } @else if (contactForm.controls.email.hasError('maxlength')) {
+                            {{ 'contact.form.email.errors.maxlength' | translate }}
+                        } @else if (contactForm.controls.email.hasError('email')) {
+                            {{ 'contact.form.email.errors.invalid' | translate }}
+                        }
+                    </span>
+                }
+            </div>
+        </div>
+
+        <!-- Subject -->
+        <div class="contact-form__field">
+            <label
+                for="contact-subject"
+                class="contact-form__label"
+            >
+                {{ 'contact.form.subject.label' | translate }}
+            </label>
+            <input
+                id="contact-subject"
+                class="contact-form__input"
+                type="text"
+                formControlName="subject"
+                autocomplete="off"
+                [placeholder]="'contact.form.subject.placeholder' | translate"
+                [class.contact-form__input--error]="
+                    contactForm.controls.subject.invalid && contactForm.controls.subject.touched
+                "
+                [attr.aria-invalid]="
+                    contactForm.controls.subject.invalid && contactForm.controls.subject.touched
+                "
+                [attr.aria-describedby]="
+                    contactForm.controls.subject.invalid && contactForm.controls.subject.touched
+                        ? 'contact-subject-error'
+                        : null
+                "
+            />
+            @if (contactForm.controls.subject.invalid && contactForm.controls.subject.touched) {
+                <span
+                    id="contact-subject-error"
+                    class="contact-form__error"
+                    aria-live="polite"
+                    role="alert"
+                >
+                    @if (contactForm.controls.subject.hasError('required')) {
+                        {{ 'contact.form.subject.errors.required' | translate }}
+                    } @else if (contactForm.controls.subject.hasError('minlength')) {
+                        {{ 'contact.form.subject.errors.minlength' | translate }}
+                    } @else if (contactForm.controls.subject.hasError('maxlength')) {
+                        {{ 'contact.form.subject.errors.maxlength' | translate }}
+                    }
+                </span>
+            }
+        </div>
+
+        <!-- Message -->
+        <div class="contact-form__field">
+            <label
+                for="contact-message"
+                class="contact-form__label"
+            >
+                {{ 'contact.form.message.label' | translate }}
+            </label>
+            <textarea
+                id="contact-message"
+                ,
+                class="contact-form__textarea"
+                formControlName="message"
+                maxlength="2000"
+                [placeholder]="'contact.form.message.placeholder' | translate"
+                [class.contact-form__input--error]="
+                    contactForm.controls.message.invalid && contactForm.controls.message.touched
+                "
+                [attr.aria-invalid]="
+                    contactForm.controls.message.invalid && contactForm.controls.message.touched
+                "
+                [attr.aria-describedby]="
+                    contactForm.controls.message.invalid && contactForm.controls.message.touched
+                        ? 'contact-message-error'
+                        : 'contact-message-helper'
+                "
+            ></textarea>
+            @if (contactForm.controls.message.invalid && contactForm.controls.message.touched) {
+                <span
+                    id="contact-message-error"
+                    class="contact-form__error"
+                    aria-live="polite"
+                    role="alert"
+                >
+                    @if (contactForm.controls.message.hasError('required')) {
+                        {{ 'contact.form.message.errors.required' | translate }}
+                    } @else if (contactForm.controls.message.hasError('minlength')) {
+                        {{ 'contact.form.message.errors.minlength' | translate }}
+                    } @else if (contactForm.controls.message.hasError('maxlength')) {
+                        {{ 'contact.form.message.errors.maxlength' | translate }}
+                    }
+                </span>
+            } @else {
+                <span
+                    id="contact-message-helper"
+                    class="contact-form__helper"
+                    aria-live="polite"
+                    role="alert"
+                >
+                    {{ 'contact.form.message.helper' | translate }}
+                </span>
+            }
+        </div>
+
+        <!-- Submit -->
+        <button
+            class="contact-form__submit"
+            type="submit"
+            [disabled]="isSubmitting()"
+        >
+            {{ (isSubmitting() ? 'contact.form.submitting' : 'contact.form.submit') | translate}}
+        </button>
+    </form>
+</section>

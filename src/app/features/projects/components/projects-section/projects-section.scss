@@ -85,6 +85,7 @@
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: var(--shadow-button-carousel-press);
     }
 
     &:focus-visible {
@@ -97,7 +98,7 @@
 @media (hover: hover) and (pointer: fine) {
     .projects-section__control {
         opacity: 0;
-        box-shadow: var(--shadow-md);
+        box-shadow: var(--shadow-button-carousel);
         pointer-events: none;
     }
 
@@ -139,10 +140,6 @@
     .projects-section__grid:not(.projects-section__grid--carousel) {
         flex-direction: row;
         flex-wrap: wrap;
-    }
-
-    .projects-section__grid--carousel {
-        gap: ds.$grid-gutter-desktop-md;
     }
 }
 

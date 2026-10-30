@@ -30,12 +30,12 @@
     border: 0;
     border-radius: vars.$radius-md;
     cursor: pointer;
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-button);
     transition:
         background-color vars.$motion-fast vars.$ease-standard,
         color vars.$motion-fast vars.$ease-standard,
         border-color vars.$motion-fast vars.$ease-standard,
-        box-shadow vars.$motion-fast vars.$ease-standard;
+        box-shadow vars.$motion-medium vars.$ease-enter;
 }
 
 @mixin button-primary() {
