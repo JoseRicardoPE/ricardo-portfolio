@@ -19,24 +19,64 @@
             </button>
         }
         <div
-            #carousel
             class="projects-section__grid"
             [class.projects-section__grid--carousel]="layout() === 'carousel'"
         >
-            @for (project of projects(); track project._id) {
-                <app-project-card
-                    [imageSrc]="project.thumbnail"
-                    [imageAlt]="project.title"
-                    [category]="project.category"
-                    [title]="project.title"
-                    [description]="project.shortDescription[language()]"
-                    [technologies]="getTechnologyNames(project)"
-                    [projectUrl]="'/projects/' + project.slug"
-                    [shadow]="layout() !== 'carousel'"
+            @if (layout() === 'carousel') {
+                <div
+                    #carousel
+                    class="projects-section__track"
+                    (pointerdown)="onPointerDown($event)"
+                    (pointermove)="onPointerMove($event)"
+                    (pointerup)="onPointerUp($event)"
+                    (pointercancel)="onPointerUp($event)"
                 >
-                </app-project-card>
+                    @for (project of projects(); track project._id) {
+                        <app-project-card
+                            [imageSrc]="project.thumbnail"
+                            [imageAlt]="project.title"
+                            [category]="project.category"
+                            [title]="project.title"
+                            [description]="project.shortDescription[language()]"
+                            [technologies]="getTechnologyNames(project)"
+                            [projectUrl]="'/projects/' + project.slug"
+                            [shadow]="false"
+                        >
+                        </app-project-card>
+                    }
+                    @for (project of projects(); track project._id) {
+                        <app-project-card
+                            aria-hidden="true"
+                            inert
+                            [imageSrc]="project.thumbnail"
+                            [imageAlt]="project.title"
+                            [category]="project.category"
+                            [title]="project.title"
+                            [description]="project.shortDescription[language()]"
+                            [technologies]="getTechnologyNames(project)"
+                            [projectUrl]="'/projects/' + project.slug"
+                            [shadow]="false"
+                        >
+                        </app-project-card>
+                    }
+                </div>
+            } @else {
+                @for (project of projects(); track project._id) {
+                    <app-project-card
+                        [imageSrc]="project.thumbnail"
+                        [imageAlt]="project.title"
+                        [category]="project.category"
+                        [title]="project.title"
+                        [description]="project.shortDescription[language()]"
+                        [technologies]="getTechnologyNames(project)"
+                        [projectUrl]="'/projects/' + project.slug"
+                        [shadow]="true"
+                    >
+                    </app-project-card>
+                }
             }
         </div>
+
         @if (layout() === 'carousel') {
             <button
                 type="button"
