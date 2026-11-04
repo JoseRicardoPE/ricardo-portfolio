@@ -1,2 +1,17 @@
 @use '../../../../../styles/abstracts' as ds;
 
+
+.case-study__loading,
+.case-study__error {
+    display: flex;
+    gap: ds.$grid-gutter-mobile-lg;
+    padding: ds.$grid-margin-vertical-mobile ds.$grid-margin-horizontal-mobile;
+}
+
+@include ds.desktop {
+    .case-study__loading,
+    .case-study__error {
+        gap: ds.calculateRem(32px);
+        padding: ds.$grid-margin-vertical-desktop-md ds.$grid-margin-horizontal-desktop;
+    }
+}

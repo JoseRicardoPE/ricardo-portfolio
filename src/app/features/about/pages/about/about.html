@@ -1,6 +1,6 @@
 <app-hero
     imageSrc="/images/about/hero-about-me.png"
-    imageAlt="Preview of Ricardo Pacheco's portfolio project"
+    [imageAlt]="'about.hero.imageAlt' | translate"
     [eyebrow]="'about.hero.eyebrow' | translate"
     [heading]="'about.hero.heading' | translate"
     [description]="'about.hero.description' | translate"
@@ -11,11 +11,11 @@
     [paragraphs]="'about.profile.description' | translate"
 ></app-professional-profile>
 <app-my-cv
+    imageSrc="/images/cv/cv.png"
     [title]="'about.myCv.title' | translate"
     [heading]="'about.myCv.heading' | translate"
     [description]="'about.myCv.description' | translate"
-    imageSrc="/images/cv/cv.png"
-    imageAlt="Illustration of Ricardo Pacheco's CV available for PDF download and online viewing"
+    [imageAlt]="'about.myCv.imageAlt' | translate"
 >
     <app-button-link
         cv-actions

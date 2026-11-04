@@ -1,6 +1,7 @@
 <div 
     class="language-selector"
-    aria-label="Language selector"    
+    [attr.aria-label]="'common.languageSelector' | translate"
+    role="group"   
 >
     <button
         type="button"
@@ -8,6 +9,7 @@
         [class.language-selector__option--active]="language() === 'es'"
         [attr.aria-pressed]="language() === 'es'"
         (click)="selectLanguage('es')"
+        [attr.aria-label]="'common.spanish' | translate"
     >
         ES
     </button>
@@ -17,6 +19,7 @@
         [class.language-selector__option--active]="language() === 'en'"
         [attr.aria-pressed]="language() === 'en'"
         (click)="selectLanguage('en')"
+        [attr.aria-label]="'common.english' | translate"
     >
         EN
     </button>

@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, input, signal } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input, signal, effect } from '@angular/core';
 import { Typewriter } from '../../../../shared/directives/typewriter/typewriter';
 
 @Component({
@@ -12,6 +12,13 @@ export class ProfessionalProfile {
   readonly title = input.required<string>();
   readonly paragraphs = input.required<string[]>();
   readonly activeParagraph = signal(0);
+
+  constructor() {
+    effect(() => {
+      this.paragraphs();
+      this.activeParagraph.set(0);
+    })
+  }
 
   onTypingCompleted(index: number): void {
     this.activeParagraph.set(index + 1);

@@ -2,7 +2,7 @@
     @let currentState = state();
     @switch (currentState.status) {
         @case ('loading') {
-            <span>Loading case study...</span>
+            <span class="case-study__loading">{{ 'caseStudy.states.loading' | translate }}</span>
         }
         @case ('success') {
             <app-hero
@@ -43,7 +43,7 @@
             }
         }
         @case ('error') {
-            <span>Unable to load case study.</span>
+            <span class="case-study__error">{{ 'caseStudy.states.error' | translate }}</span>
         }
     }
 </section>

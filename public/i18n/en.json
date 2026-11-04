@@ -1,4 +1,26 @@
 {
+  "seo": {
+    "home": {
+      "title": "Ricardo Pacheco | Frontend Engineer",
+      "description": "Professional portfolio of Ricardo Pacheco, a Frontend Engineer specializing in Angular, TypeScript, and web application development."
+    },
+    "about": {
+      "title": "About Me | Ricardo Pacheco",
+      "description": "Learn about my experience as a Frontend Engineer, my Angular specialization, UI development expertise, and backend technology knowledge."
+    },
+    "projects": {
+      "title": "Projects | Ricardo Pacheco",
+      "description": "Explore my web development projects using Angular, TypeScript, and Full Stack technologies, featuring responsive and scalable solutions."
+    },
+    "caseStudy": {
+      "title": "Case Study | Ricardo Pacheco",
+      "description": "Discover the development process, technical decisions, and solutions implemented in my software projects."
+    },
+    "contact": {
+      "title": "Contact | Ricardo Pacheco",
+      "description": "Get in touch with Ricardo Pacheco, an Angular-focused Frontend Engineer, for career opportunities and project collaborations."
+    }
+  },
   "states": {
     "loading": "Loading projects...",
     "error": "Unable to load projects.",
@@ -21,6 +43,7 @@
       "eyebrow": "FRONTEND ENGINEER",
       "heading": "I build modern and scalable web experiences with Angular",
       "description": "Frontend Engineer specialized in Angular, TypeScript and modern UI development.",
+      "imageAlt": "Preview of Ricardo Pacheco's portfolio project",
       "viewProjects": "View projects"
     },
     "featuredProjects": {
@@ -40,20 +63,25 @@
   },
   "common": {
     "viewProjects": "View project",
-    "github": "GitHub"
+    "github": "GitHub",
+    "languageSelector": "Select language",
+    "spanish": "Spanish",
+    "english": "English"
   },
   "about": {
     "hero": {
       "eyebrow": "ABOUT ME",
       "heading": "Building modern web experiences with purpose",
-      "description": "Frontend Engineer specialized in Angular, with experience building scalable applications and a passion for clean code and great user experience."
+      "description": "Frontend Engineer specialized in Angular, with experience building scalable applications and a passion for clean code and great user experience.",
+      "imageAlt": "Preview of Ricardo Pacheco's portfolio project"
     },
     "myCv": {
       "title": "MY CV",
       "heading": "Get a copy of my CV",
       "description": "Download the PDF or view the online version.",
       "downloadLabel": "Download CV (PDF)",
-      "onlineLabel": "View Online CV"
+      "onlineLabel": "View Online CV",
+      "imageAlt": "Illustration of Ricardo Pacheco's CV available for PDF download and online viewing"
     },
     "profile": {
       "title": "PROFESSIONAL PROFILE",
@@ -76,7 +104,8 @@
     "hero": {
       "eyebrow": "MY WORK",
       "heading": "Projects that solve real problems",
-      "description": "A selection of web applications and digital solutions built with Angular, TypeScript and modern technologies."
+      "description": "A selection of web applications and digital solutions built with Angular, TypeScript and modern technologies.",
+      "imageAlt": "Portfolio project preview"
     },
     "featuredProjects": {
       "title": "PROJECTS"
@@ -87,6 +116,14 @@
       "description": "I'm constantly working on new ideas and open source contributions.",
 
       "imageAlt": "Illustration of a code window under construction with a gear and a safety barrier"
+    },
+    "carousel": {
+      "previous": "Previous project",
+      "next": "Next project"
+    },
+    "categories": {
+      "frontend": "Frontend",
+      "fullstack": "Full Stack"
     }
   },
   "caseStudy": {
@@ -106,6 +143,10 @@
     "controls": {
       "back": "Back to Projects",
       "next": "Next Project"
+    },
+    "states": {
+      "loading": "Loading case study...",
+      "error": "Unable to load case study."
     }
   },
   "notifications": {
@@ -118,7 +159,8 @@
     "hero": {
       "eyebrow": "GET IN TOUCH",
       "heading": "Let's build something great together",
-      "description": "I'm always open to new opportunities, interesting projects or just a friendly chat about technology."
+      "description": "I'm always open to new opportunities, interesting projects or just a friendly chat about technology.",
+      "imageAlt": "Portfolio project preview"
     },
     "options": {
       "title": "CONTACT OPTIONS",
@@ -207,6 +249,9 @@
     },
     "github": {
       "arialabel": "Visit Ricardo Pacheco's GitHub profile"
+    },
+    "role": {
+      "role": "Frontend Engineer"
     }
   }
 }

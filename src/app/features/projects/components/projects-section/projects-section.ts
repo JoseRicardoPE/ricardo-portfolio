@@ -8,8 +8,6 @@ import {
   afterNextRender,
   DestroyRef,
   effect,
-  Injector,
-  runInInjectionContext,
   untracked,
 } from '@angular/core';
 import { ProjectCard } from '../../../../design-system/project-card/project-card';
@@ -17,11 +15,11 @@ import { Project } from '../../models/project.model';
 import { AppLanguageService } from '../../../../core/services/app-language.service';
 import { Layout } from '../../../../shared/layout/models/layout.model';
 import { Icon } from '../../../../design-system/icon/icon';
-import { timestamp } from 'rxjs';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects-section',
-  imports: [ProjectCard, Icon],
+  imports: [ProjectCard, Icon, TranslatePipe],
   templateUrl: './projects-section.html',
   styleUrl: './projects-section.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
