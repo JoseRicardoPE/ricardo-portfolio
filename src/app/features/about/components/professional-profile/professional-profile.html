@@ -2,11 +2,14 @@
     class="professional-profile"
     aria-labelledby="professional-profile-title"
 >
-    <h2 class="professional-profile__title">
+    <h2 
+        class="professional-profile__title"
+        id="professional-profile-title"
+    >
         {{ title() }}
     </h2>
     <div class="professional-profile__description">
-        @for (paragraph of paragraphs(); track $index) {
+        @for (paragraph of paragraphs(); track paragraph) {
             @if ($index <= activeParagraph()) {
                 <p
                     class="professional-profile__paragraph"

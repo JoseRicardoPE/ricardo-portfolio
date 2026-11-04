@@ -1,5 +1,11 @@
-<section class="projects-section">
-    <h2 class="projects-section__title">
+<section
+    class="projects-section"
+    aria-labelledby="projects-section-title"
+>
+    <h2
+        id="projects-section-title"
+        class="projects-section__title"
+    >
         {{ title() }}
     </h2>
     <div
@@ -10,7 +16,7 @@
             <button
                 type="button"
                 class="projects-section__control projects-section__control--previous"
-                aria-label="Proyecto anterior"
+                [attr.aria-label]="'projects.carousel.previous' | translate"
                 (click)="scrollCarousel('previous')"
             >
                 <span aria-hidden="true">
@@ -81,7 +87,7 @@
             <button
                 type="button"
                 class="projects-section__control projects-section__control--next"
-                aria-label="Proyecto siguiente"
+                [attr.aria-label]="'projects.carousel.next' | translate"
                 (click)="scrollCarousel('next')"
             >
                 <span aria-hidden="true">

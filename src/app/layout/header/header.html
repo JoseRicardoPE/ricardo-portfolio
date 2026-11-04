@@ -53,7 +53,7 @@
             type="button"
             [attr.aria-expanded]="isMenuOpen()"
             aria-controls="mobile-menu"
-            [attr.aria-label]="(isMenuOpen() ? 'header.closeMenu' : 'header.openMenu' | translate)"
+            [attr.aria-label]="(isMenuOpen() ? 'header.closeMenu' : 'header.openMenu') | translate"
             (click)="toggleMenu()"
         >
             @if (isMenuOpen()) {

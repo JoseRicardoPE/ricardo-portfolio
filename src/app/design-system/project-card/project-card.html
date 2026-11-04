@@ -12,7 +12,7 @@
     <div class="project-card__content">
         <div class="project-card__info">
             <div class="project-card__info-wrapper">
-                <span class="project-card__category">{{ category() }}</span>
+                <span class="project-card__category">{{ ('projects.categories.' + category()) | translate }}</span>
                 <h3 class="project-card__title">{{ title() }}</h3>
                 <p class="project-card__description">{{ description() }}</p>
             </div>

@@ -1,4 +1,26 @@
 {
+  "seo": {
+    "home": {
+      "title": "Ricardo Pacheco | Frontend Engineer",
+      "description": "Portafolio profesional de Ricardo Pacheco, Frontend Engineer especializado en Angular, TypeScript y desarrollo de aplicaciones web."
+    },
+    "about": {
+      "title": "Sobre mí | Ricardo Pacheco",
+      "description": "Conoce mi experiencia como Frontend Engineer, mi especialización en Angular, desarrollo de interfaces y conocimientos en tecnologías backend."
+    },
+    "projects": {
+      "title": "Proyectos | Ricardo Pacheco",
+      "description": "Explora mis proyectos de desarrollo web con Angular, TypeScript y tecnologías Full Stack, incluyendo soluciones responsivas y escalables."
+    },
+    "caseStudy": {
+      "title": "Caso de estudio | Ricardo Pacheco",
+      "description": "Descubre el proceso de desarrollo, las decisiones técnicas y las soluciones implementadas en mis proyectos de software."
+    },
+    "contact": {
+      "title": "Contacto | Ricardo Pacheco",
+      "description": "Contacta con Ricardo Pacheco, Frontend Engineer especializado en Angular, para oportunidades laborales y colaboración en proyectos."
+    }
+  },
   "states": {
     "loading": "Cargando proyectos...",
     "error": "No fue posible cargar los proyectos.",
@@ -11,7 +33,7 @@
     "contact": "Contacto"
   },
   "header": {
-    "homeAriaLable": "Ir al inicio",
+    "homeAriaLabel": "Ir al inicio",
     "mainNavigation": "Navegación principal",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú"
@@ -21,6 +43,7 @@
       "eyebrow": "FRONTEND ENGINEER",
       "heading": "Construyo experiencias web modernas y escalables con Angular",
       "description": "Frontend Engineer especializado en Angular, TypeScript y desarrollo de interfaces modernas.",
+      "imageAlt": "Vista previa del proyecto del portafolio de Ricardo Pacheco",
       "viewProjects": "Ver proyectos"
     },
     "featuredProjects": {
@@ -40,20 +63,25 @@
   },
   "common": {
     "viewProjects": "Ver proyecto",
-    "github": "GitHub"
+    "github": "GitHub",
+    "languageSelector": "Seleccionar idioma",
+    "spanish": "Español",
+    "english": "Inglés"
   },
   "about": {
     "hero": {
       "eyebrow": "SOBRE MÍ",
       "heading": "Construyendo experiencias web modernas con propósito",
-      "description": "Ingeniero Frontend especializado en Angular, con experiencia en el desarrollo de aplicaciones escalables y pasión por el código limpio y una excelente experiencia de usuario."
+      "description": "Ingeniero Frontend especializado en Angular, con experiencia en el desarrollo de aplicaciones escalables y pasión por el código limpio y una excelente experiencia de usuario.",
+      "imageAlt": "Vista previa del proyecto de portafolio de Ricardo Pacheco"
     },
     "myCv": {
       "title": "MI CV",
       "heading": "Obtén una copia de mi CV",
       "description": "Descarga el PDF o consulta la versión en línea.",
       "downloadLabel": "Descargar CV (PDF)",
-      "onlineLabel": "Ver en línea CV"
+      "onlineLabel": "Ver CV en línea",
+      "imageAlt": "Ilustración del CV de Ricardo Pacheco, disponible para descargar en PDF y consultar en línea"
     },
     "profile": {
       "title": "PERFIL PROFESIONAL",
@@ -75,8 +103,9 @@
   "projects": {
     "hero": {
       "eyebrow": "MI TRABAJO",
-      "heading": "Proyectos que resuelven problemas reales.",
-      "description": "Una selección de aplicaciones web y soluciones digitales desarrolladas con Angular, TypeScript y tecnologías modernas."
+      "heading": "Proyectos que resuelven problemas reales",
+      "description": "Una selección de aplicaciones web y soluciones digitales desarrolladas con Angular, TypeScript y tecnologías modernas.",
+      "imageAlt": "Vista previa del proyecto de portafolio"
     },
     "featuredProjects": {
       "title": "PROYECTOS"
@@ -87,6 +116,14 @@
       "description": "Trabajando constantemente en nuevas ideas y contribuciones a proyectos de código abierto.",
 
       "imageAlt": "Ilustración de una ventana de código en construcción con un engranaje y una barrera de seguridad"
+    },
+    "carousel": {
+      "previous": "Proyecto anterior",
+      "next": "Proyecto siguiente"
+    },
+    "categories": {
+      "frontend": "Frontend",
+      "fullstack": "Full Stack"
     }
   },
   "caseStudy": {
@@ -106,6 +143,10 @@
     "controls": {
       "back": "Regresar a proyectos",
       "next": "Siguiente proyecto"
+    },
+    "states": {
+      "loading": "Cargando caso de estudio...",
+      "error": "No fue posible cargar el caso de estudio."
     }
   },
   "notifications": {
@@ -118,7 +159,8 @@
     "hero": {
       "eyebrow": "HABLEMOS",
       "heading": "Construyamos algo increíble juntos",
-      "description": "Siempre estoy abierto a nuevas oportunidades, proyectos interesantes o simplemente a una buena conversación sobre tecnología."
+      "description": "Siempre estoy abierto a nuevas oportunidades, proyectos interesantes o simplemente a una buena conversación sobre tecnología.",
+      "imageAlt": "Vista previa de proyecto del portafolio"
     },
     "options": {
       "title": "OPCIONES DE CONTACTO",
@@ -207,6 +249,9 @@
     },
     "github": {
       "arialabel": "Visitar el perfil de Ricardo Pacheco en GitHub"
+    },
+    "role": {
+      "role": "Ingeniero Frontend"
     }
   }
 }

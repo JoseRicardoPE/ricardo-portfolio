@@ -1,9 +1,10 @@
-import { Directive, ElementRef, inject, input, Output, OnDestroy, OnInit, Renderer2, output } from '@angular/core';
+import { Directive, ElementRef, inject, input, OnDestroy, Renderer2, output, effect } from '@angular/core';
 
 @Directive({
   selector: '[appTypewriter]',
 })
-export class Typewriter implements OnInit, OnDestroy {
+
+export class Typewriter implements OnDestroy {
   private readonly elementRef = inject(ElementRef<HTMLElement>);
   private readonly renderer = inject(Renderer2);
 
@@ -15,24 +16,32 @@ export class Typewriter implements OnInit, OnDestroy {
   private timeoutId?: ReturnType<typeof setTimeout>;
   private intervalId?: ReturnType<typeof setInterval>;
 
-  ngOnInit(): void {
-    this.renderer.setProperty(this.elementRef.nativeElement, 'textContent', '');
+  constructor() {
+    effect(() => {
+      const text = this.text();
+      const speed = this.speed();
+      const delay = this.delay();
 
-    this.timeoutId = setTimeout(() => {
-      this.typeText();
-    }, this.delay())
+      this.clearTimers();
+
+      this.renderer.setProperty(this.elementRef.nativeElement, 'textContent', '');
+
+      this.timeoutId = setTimeout(() => {
+        this.typeText(text, speed);
+      }, delay)
+    })
   }
 
-  private typeText(): void {
+  private typeText(text: string, speed: number): void {
     let currentIndex = 0;
-    const text = this.text();
-
+    
     this.intervalId = setInterval(() => {
       if (currentIndex < text.length) {
         currentIndex++;
         this.renderer.setProperty(this.elementRef.nativeElement, 'textContent', text.slice(0, currentIndex));
       } else {
         clearInterval(this.intervalId);
+        this.intervalId = undefined;
 
         // Notificación para indicar que terminó la escritura
         this.typingCompleted.emit();
@@ -40,8 +49,12 @@ export class Typewriter implements OnInit, OnDestroy {
     }, this.speed());
   }
 
-  ngOnDestroy(): void {
+  private clearTimers(): void {
     clearTimeout(this.timeoutId);
     clearInterval(this.intervalId);
+  }
+
+  ngOnDestroy(): void {
+    this.clearTimers();
   }
 }
