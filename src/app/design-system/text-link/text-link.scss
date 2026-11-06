@@ -12,7 +12,7 @@
     align-items: center;
     gap: ds.$space-2;
     padding: 0;
-    color: var(--color-icon-primary);
+    color: var(--color-interactive-primary);
     text-decoration: none;
     cursor: pointer;
 
@@ -23,7 +23,7 @@
         left: 0;
         width: 100%;
         height: ds.calculateRem(2px);
-        background-color: var(--color-icon-primary-hover);
+        background-color: var(--color-interactive-primary-hover);
         transform: scaleX(0);
         transform-origin: left center;
         transition: transform ds.$motion-slow ds.$ease-standard;
@@ -31,7 +31,6 @@
 
     &:hover:not([aria-disabled='true'])::after {
         transform: scaleX(1);
-        // transform-origin: bottom left;
     }
 
     &:focus-visible {

@@ -21,6 +21,10 @@
       "description": "Contacta con Ricardo Pacheco, Frontend Engineer especializado en Angular, para oportunidades laborales y colaboración en proyectos."
     }
   },
+  "theme": {
+    "activateDark": "Activar tema oscuro",
+    "activateLight": "Activar tema claro"
+  },
   "states": {
     "loading": "Cargando proyectos...",
     "error": "No fue posible cargar los proyectos.",

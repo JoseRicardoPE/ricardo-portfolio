@@ -1,7 +1,7 @@
 <button
     class="theme-toggle"
     type="button"
-    [attr.aria-label]="theme() === 'light' ? 'Activar tema oscuro' : 'Activar tema claro'"
+    [attr.aria-label]="(theme() === 'light' ? 'theme.activateDark' : 'theme.activateLight') | translate"
     (click)="toggleTheme()"
 >
     @if (theme() === 'light') {

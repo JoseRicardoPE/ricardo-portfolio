@@ -2,6 +2,17 @@
 <html lang="es">
     <head>
         <meta charset="utf-8" />
+        <script>
+            (() => {
+                try {
+                    const storedTheme = localStorage.getItem('app-theme');
+                    const theme = storedTheme === 'dark' ? 'dark' : 'light';
+                    document.documentElement.setAttribute('data-theme', theme);
+                } catch {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            })();
+        </script>
         <title>Ricardo Pacheco | Frontend Engineer</title>
         <base href="/" />
         <meta

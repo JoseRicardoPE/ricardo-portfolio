@@ -3,6 +3,8 @@
 
 :root,
 [data-theme='light'] {
+    color-scheme: light;
+    
     // Background
     --image-background-page: url('/images/backgrounds/page-background-light.png');
     --color-background-primary: #{c.$neutral-0};
