@@ -59,12 +59,12 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-icon-primary);
+    color: var(--color-interactive-primary);
     text-decoration: none;
     transition: color ds.$motion-fast ds.$ease-standard;
 
     &:hover {
-        color: var(--color-icon-primary-hover);
+        color: var(--color-interactive-primary-hover);
     }
 
     &:focus-visible {

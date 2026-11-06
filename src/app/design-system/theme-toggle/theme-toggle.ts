@@ -1,11 +1,11 @@
 import { Component, ChangeDetectionStrategy, input, output } from '@angular/core';
 import { Icon } from '../icon/icon';
-
-export type Theme = 'light' | 'dark';
+import { ThemeToggle as Theme } from './models/theme-toggle.model';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-theme-toggle',
-  imports: [Icon],
+  imports: [Icon, TranslatePipe],
   templateUrl: './theme-toggle.html',
   styleUrl: './theme-toggle.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

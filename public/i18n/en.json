@@ -21,6 +21,10 @@
       "description": "Get in touch with Ricardo Pacheco, an Angular-focused Frontend Engineer, for career opportunities and project collaborations."
     }
   },
+  "theme": {
+    "activateDark": "Enable dark mode",
+    "activateLight": "Enable light mode"
+  },
   "states": {
     "loading": "Loading projects...",
     "error": "Unable to load projects.",

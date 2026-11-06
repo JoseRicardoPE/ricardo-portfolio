@@ -43,7 +43,10 @@
             </nav>
             <div class="header__desktop-actions">
                 <app-language-selector></app-language-selector>
-                <app-theme-toggle></app-theme-toggle>
+                <app-theme-toggle
+                    [theme]="theme()"
+                    (themeChange)="setTheme($event)"
+                ></app-theme-toggle>
             </div>
          </div>
 
@@ -104,7 +107,9 @@
             </nav>
             <div class="header__mobile-actions">
                 <app-language-selector></app-language-selector>
-                <app-theme-toggle></app-theme-toggle>
+                <app-theme-toggle
+                    [theme]="theme()"
+                    (themeChange)="setTheme($event)"></app-theme-toggle>
             </div>
         </div>
     }

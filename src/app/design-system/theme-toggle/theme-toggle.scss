@@ -18,7 +18,7 @@
         color ds.$motion-fast ds.$ease-standard;
 
     &:hover {
-        background-color: var(--color-background-hover);
+        color: var(--color-interactive-primary-hover);
     }
 
     &:focus-visible {

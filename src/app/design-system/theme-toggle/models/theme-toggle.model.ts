@@ -1,0 +1,1 @@
+export type ThemeToggle = 'light' | 'dark';
